@@ -1,7 +1,0 @@
-@use '../abstracts' as a;
-.logo {
-    @include a.logo(a.$color-dark, a.$ff-primary, 3.125rem);
-    &--small {
-        @include a.logo(a.$color-bright, a.$ff-primary, 1.5625rem)
-    }
-}

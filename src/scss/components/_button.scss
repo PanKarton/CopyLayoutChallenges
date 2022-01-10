@@ -1,7 +1,0 @@
-@use '../abstracts' as *;
-button.section-button {
-    border: none;
-    @include typography($font: $ff-secondary, $weight: 300, $size: 1.25rem);
-    padding: 1rem 2rem;
-    box-shadow: -2px 2px 5px 0 #505050;
-}
