@@ -1,0 +1,35 @@
+@use '../abstracts' as *;
+nav {
+    display: none;
+    background-color: $bgcolor-header;
+    height: $nav-height;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    & .max-container--nav {
+        width: min(85rem, 80vw) !important;
+        height: 100%;
+        margin: 0 auto;
+        @include flex($direction: row, $justify: space-between, $align: center);
+    }
+    .nav-list {
+        @include flex($direction: row, $justify: center, $align: center);
+        gap: .6rem;
+        @include small-screen {
+            display: none;
+        }
+        li {
+            @include typography($font: $ff-secondary, $weight: 700, $size: 1.1rem);
+            position: relative;
+            &.active::before {
+                content: '';
+                position: absolute;
+                inset: -.4rem 0 auto 0;
+                height: 3px;
+                background-color: $color-orange-bright;
+            }
+        }
+    }
+}

@@ -1,0 +1,47 @@
+@use '../abstracts' as *;
+header {
+    background-color: $bgcolor-header;
+    background-image: url('../img/header.jpg');
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    .max-container {
+        position: relative;
+        min-height: 100vh;
+        @include flex($direction: row, $justify: flex-start, $align: center);
+        .header-card {
+            @include flex($direction: column, $justify: center, $align: flex-start);
+            gap: 2.5rem;
+            max-width: 25rem;
+            &__title {
+                text-shadow: none;
+            }
+            &__button {
+                color: $color-bright;
+                background-color: $color-orange-bright;
+            }
+        }
+        .scroll-icon {
+            position: absolute;
+            bottom: 2rem;
+            left: 50%;
+            transform: translateX(-50%);
+            animation-name: scroll;
+            animation-direction: alternate-reverse;
+            animation-duration: 1s;
+            animation-timing-function: ease-in-out;
+            animation-iteration-count: infinite;
+        }
+    }
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(-50%) translateY(0%);
+    }
+    80% {
+        transform: translateX(-50%) translateY(0%);
+    }
+    100% {
+        transform: translateX(-50%) translateY(20%);
+    }
+}

@@ -1,0 +1,11 @@
+h2 {
+    font-family: 'Raleway', sans-serif;
+    font-size: 5.625rem;
+    font-weight: 700;
+}
+
+.description {
+    font-family: 'Raleway', sans-serif;
+    font-size: clamp(1.3rem, 3vw, 1.5rem);
+    font-weight: 300;
+}

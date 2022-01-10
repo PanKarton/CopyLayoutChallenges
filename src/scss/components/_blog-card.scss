@@ -1,0 +1,35 @@
+@use '../abstracts' as *;
+.c-card {
+    width: 260px;
+    height: 220px;
+    position: relative;
+    @include flex(column, flex-end, flex-start);
+    padding: 1rem;
+    gap: 1rem;
+    box-shadow: 5px 5px 5px #303030;
+    cursor: pointer;
+    transition: transform .1s ease-in-out;
+    &:hover {
+        transform: scale(1.02);
+    }
+    &__date {
+        position: absolute;
+        inset: 1rem auto auto 1rem;
+        width: 20%;
+        aspect-ratio: 1;
+        background-color: hsla(0, 0%, 0%, .5);
+        border-radius: 10px;
+        color: $color-bright;
+        @include flex(row, center, center);
+        p {
+            @include typography($ff-secondary, 700, 1.3rem);
+            text-align: center;
+        }
+    }
+    &__title {
+        @include typography($ff-secondary, 700, 1.3rem);
+    }
+    &__author-desc {
+        @include typography($ff-secondary, 300, .8rem);
+    }
+}

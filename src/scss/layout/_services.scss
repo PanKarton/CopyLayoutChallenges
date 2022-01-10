@@ -1,0 +1,54 @@
+@use '../abstracts' as *;
+#services-section {
+    height: 100vh;
+    background: $bgcolor-services url('../img/services.png') no-repeat;
+    background-position: 75% 50%;
+    @include small-screen {
+        background-position: 50% 50%;
+    }
+    .l-flex {
+        height: 100%;
+        @include flex($direction: row-reverse, $justify: space-between, $align: center);
+        @include medium-screen {
+            flex-direction: column;
+            justify-content: center;
+        }
+        gap: 3rem;
+        h2.services-title {
+            color: $color-bright;
+            text-shadow: 5px 5px black;
+            font-size: clamp(4.5rem, 15vw, 5.625rem);
+        }
+        .cards-container {
+            @include flex($direction: column, $justify: space-between, $align: center);
+            gap: 1rem;
+            height: 50vh;
+            width: min(30rem, 90vw);
+            .card {
+                @include flex($direction: row, $justify: center, $align: center);
+                background-color: $color-bright;
+                width: 100%;
+                flex-basis: 25%;
+                box-shadow: 3px 3px 5px #303030;
+                cursor: pointer;
+                &:hover {
+                    transition: .1s;
+                    transform: scale(1.02);
+                }
+                &__title {
+                    height: 100%;
+                    @include flex($direction: row, $justify: center, $align: center);
+                    @include typography;
+                    flex-basis: 78%;
+                    border-right: 1px solid hsla(0, 100%, 0%, .5);
+                }
+                &__icon-box {
+                    height: 100%;
+                    @include flex($direction: row, $justify: center, $align: center);
+                    flex-basis: 22%;
+                    font-size: 3rem;
+                }
+            }
+        }
+    }
+}
