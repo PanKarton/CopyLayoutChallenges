@@ -1,6 +1,0 @@
-@use '../abstracts' as *;
-body {
-    height: 100vh;
-    background-color: $bg-main;
-    @include flex;
-}
