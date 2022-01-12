@@ -1,0 +1,100 @@
+@use '../abstracts/' as *;
+.box {
+    width: 1440px;
+    height: 96vh;
+    background-image: url('../img/pattern-background-desktop.svg');
+    background-size: 1440px;
+    background-repeat: no-repeat;
+    background-color: $pale-blue;
+    @include flex;
+    .card {
+        width: $card-width;
+        height: $card-height;
+        border-radius: 20px;
+        overflow: hidden;
+        background-color: white;
+        padding: 0 3rem 3rem 3rem;
+        @include flex(column,
+        flex-end,
+        center,
+        1.6rem);
+        text-align: center;
+        position: relative;
+        box-shadow: 0 10px 15px 15px hsla(0, 0%, 0%, .05);
+        &__main-img-container {
+            position: absolute;
+            inset: 0 0 auto 0;
+        }
+        &__title {
+            @include typography($ff-main,
+            1.8rem,
+            $dark-blue,
+            900);
+        }
+        &__description {
+            @include typography($ff-main,
+            $font-size,
+            $desaturated-blue,
+            500);
+            line-height: 1.6;
+        }
+        &__plan-container {
+            width: 100%;
+            border-radius: 15px;
+            @include flex(row,
+            flex-start,
+            center,
+            1rem);
+            padding: 1.5rem;
+            background-color: $very-pale-blue;
+        }
+        &__plan {
+            @include flex(column,
+            center,
+            center,
+            .1rem);
+            &-name {
+                @include typography($ff-main,
+                $font-size,
+                $dark-blue,
+                900);
+            }
+            &-price {
+                @include typography($ff-main,
+                $font-size,
+                $desaturated-blue,
+                500);
+            }
+            &-change {
+                margin-left: auto;
+                text-decoration: underline;
+                @include typography($ff-main,
+                $font-size,
+                $bright-blue,
+                700);
+                @include transparent-button;
+                cursor: pointer;
+            }
+        }
+        &__proceed-button {
+            width: 100%;
+            padding: 1rem 0;
+            border: none;
+            background-color: $bright-blue;
+            @include typography($ff-main,
+            $font-size,
+            $very-pale-blue,
+            700);
+            border-radius: 15px;
+            cursor: pointer;
+        }
+        &__cancel-button {
+            @include transparent-button;
+            @include typography($ff-main,
+            $font-size,
+            $desaturated-blue,
+            700);
+            // padding: 1rem 0;
+        }
+    }
+}

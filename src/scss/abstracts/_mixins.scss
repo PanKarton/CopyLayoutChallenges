@@ -1,0 +1,20 @@
+@mixin flex($direction: row, $justify: center, $align: center, $gap: 1rem) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+    gap: $gap;
+}
+
+@mixin typography($family, $size, $color, $weight) {
+    font-family: $family;
+    font-size: $size;
+    color: $color;
+    font-weight: $weight;
+}
+
+@mixin transparent-button {
+    background-color: transparent;
+    border: none;
+    border-radius: 15px;
+}

@@ -1,0 +1,10 @@
+@use '../abstracts/' as *;
+body {
+    background-color: black;
+    @include flex;
+    height: 100vh;
+}
+
+img {
+    max-width: 100%;
+}
