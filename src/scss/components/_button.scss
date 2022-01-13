@@ -1,0 +1,9 @@
+@use '../abstracts/' as *;
+.blue-button {
+    background: linear-gradient(90deg, $cyan 0%, $blue 100%);
+    padding: 1rem 0;
+    border-radius: 300px;
+    border: none;
+    color: $white;
+    @include typography($family: $ff-secondary, $size: $font-size, $color: $white, $weight: 700);
+}
