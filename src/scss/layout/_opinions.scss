@@ -1,0 +1,47 @@
+@use '../abstracts/' as *;
+.opinions {
+    padding: 10rem 0;
+    &>.l-flex {
+        position: relative;
+        @include flex($gap: 2rem);
+        flex-wrap: wrap;
+        width: min(70rem, 75vw);
+        margin: 0 auto;
+    }
+    .tile {
+        flex-basis: 22rem;
+        position: relative;
+        z-index: 100;
+        background-color: $bgc-testimonials;
+        padding: 2rem 1.5rem;
+        @include flex($direction: column, $align: flex-start, $gap: 1rem);
+        &__opinion {
+            @include typography($family: $ff-primary, $size: .9rem, $color: $white, $weight: 400);
+            line-height: 1.5;
+        }
+        .l-flex {
+            @include flex($justify: flex-start, $gap: .5rem);
+        }
+        &__author-img-wrapper {
+            height: 1.8rem;
+            aspect-ratio: 1;
+            border-radius: 50%;
+            border: 1px solid $white;
+            overflow: hidden;
+            img {
+                max-height: 100%;
+            }
+        }
+        &__author-name {
+            @include typography($family: $ff-primary, $size: .7rem, $color: $white, $weight: 700);
+        }
+        &__author-job-position {
+            @include typography($family: $ff-primary, $size: .6rem, $color: $gray-a, $weight: 400);
+        }
+    }
+    &__quote-sign-wrapper {
+        position: absolute;
+        inset: -2rem auto auto -.5rem;
+        z-index: 0;
+    }
+}
