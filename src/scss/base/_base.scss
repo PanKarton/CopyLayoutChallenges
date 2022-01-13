@@ -1,8 +1,10 @@
 @use '../abstracts/' as *;
 body {
-    background-color: black;
-    @include flex;
-    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position-y: 15%;
+    background-image: url('../../src/img/bg-curvy-mobile.svg');
+    background-image: url('../../src/img/bg-curvy-mobile.svg'), linear-gradient(180deg, $intro-blue 18%, $bgc-main 18%);
 }
 
 img {

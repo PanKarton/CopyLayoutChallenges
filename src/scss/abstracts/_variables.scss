@@ -1,14 +1,22 @@
-// colors
-$pale-blue: hsl(225, 100%, 94%);
-$bright-blue: hsl(245, 75%, 52%);
-$very-pale-blue: hsl(225, 100%, 98%);
-$desaturated-blue: hsl(224, 23%, 55%);
-$dark-blue: hsl(223, 47%, 23%);
+// primary colors
+$intro-blue: hsl(217, 28%, 15%);
+$bgc-main: hsl(218, 28%, 13%);
+$bgc-footer: hsl(216, 53%, 9%);
+$bgc-testimonials: hsl(219, 30%, 18%);
+// accent colors
+$cyan: hsl(176, 68%, 64%);
+$blue: hsl(198, 60%, 50%);
+$light-red: hsl(0, 100%, 63%);
+// neutral colors
+$white: #fff;
+$black: #000;
 // typography
-$font-size: 1rem;
-@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
-$ff-main: 'Red Hat Display',
+$font-size: 14px;
+// Headings, Call-to-actions, Header Navigation
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
+$ff-secondary: 'Raleway',
 sans-serif;
-// sizes
-$card-width: 450px;
-$card-height: 700px;
+// Body
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+$ff-primary: 'Open Sans',
+sans-serif;
