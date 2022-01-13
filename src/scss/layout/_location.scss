@@ -1,0 +1,40 @@
+@use '../abstracts/' as *;
+.location {
+    padding-top: 3rem;
+    .l-flex {
+        width: 90vw;
+        margin: 0 auto;
+        @include flex($gap: 4rem);
+        @include small-screen {
+            flex-direction: column;
+            gap: 3rem;
+        }
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+    &__text-wrapper {
+        flex-basis: 50%;
+        &>*+* {
+            margin-top: 1.3rem;
+        }
+    }
+    &__title {
+        max-width: 30rem;
+        @include typography($family: $ff-secondary, $size: clamp(1.3rem, 3vw, 2.5rem), $color: $white, $weight: 700);
+    }
+    &__description {
+        @include typography($family: $ff-secondary, $size: clamp(.9rem, 1.5vw, 1rem), $color: $white, $weight: 400);
+    }
+    &__anchor-wrapper {
+        @include flex($justify: flex-start, $gap: .2rem);
+        margin-right: auto;
+        a {
+            @include typography($ff-primary, $size: clamp(.9rem, 1.5vw, 1rem), $color: $cyan, $weight: 400);
+            border-bottom: 1px solid $cyan;
+            cursor: pointer;
+            &:hover {
+                color: $white;
+            }
+        }
+    }
+}

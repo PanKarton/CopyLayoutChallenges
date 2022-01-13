@@ -6,4 +6,8 @@
     border: none;
     color: $white;
     @include typography($family: $ff-secondary, $size: $font-size, $color: $white, $weight: 700);
+    cursor: pointer;
+    &:hover {
+        background: lighten($color: $cyan, $amount: 5%);
+    }
 }
