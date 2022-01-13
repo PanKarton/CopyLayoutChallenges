@@ -1,0 +1,17 @@
+@use '../abstracts/' as *;
+.nav {
+    width: 100%;
+    background-color: $intro-blue;
+    @include flex($justify: space-between, $align: flex-start);
+    padding: clamp(1.5rem, 3vw, 2.5rem) clamp(1.5rem, 3vw, 2rem);
+    &__menu {
+        @include flex($gap: clamp(.8rem, 5vw, 5rem));
+        a {
+            @include typography($ff-primary, 1rem, $gray-a, 400);
+            &:hover {
+                text-decoration: underline;
+                color: $white;
+            }
+        }
+    }
+}
