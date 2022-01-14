@@ -1,188 +1,69 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- displays site properly based on user's device -->
-
-    <link rel="icon" type="image/png" sizes="32x32" href="736eae1ff09acfe04c50.png">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer"
-    />
-    <title>Frontend Mentor | Fylo landing page with dark theme and features grid</title>
-<script defer src="bundle.js"></script><link href="main.css" rel="stylesheet"></head>
-
-<body>
-    <nav class="nav">
-        <div class="logo">
-            <img src="f5363383bf279490c4ab.svg" alt="company">
-        </div>
-        <ul class="nav__menu">
-            <li>
-                <a href="">Features</a></li>
-            <li>
-                <a href="">Team</a></li>
-            <li>
-                <a href="">Sign In</a></li>
-        </ul>
-    </nav>
-    <header class="header">
-        <div class="max-container">
-            <div class="header__main-img-wrapper">
-                <img src="c20d85255009f195b4a6.png" alt="two people playing with big briefcase">
-            </div>
-            <h2 class="header__title">All your files in one secure location, accessible anywhere.</h2>
-            <p class="header__description">Fylo stores all your most important files in one secure location. Access them wherever you need, share and collaborate with friends family, and co-workers.</p>
-            <button class="header__start-button blue-button">Get Started</button>
-        </div>
-    </header>
-    <main>
-        <section class="services">
-            <div class="l-flex">
-                <section class="tile">
-                    <div class="tile__img-wrapper">
-                        <img src="2856c661b15230024a11.svg" alt="computer image">
-                    </div>
-                    <h3 class="tile__title">Access your files, anywhere</h3>
-                    <p class="tile__description">The ability to use a smartphone, tablet, or computer to access your account means your files follow you everywhere.</p>
-                </section>
-                <section class="tile">
-                    <div class="tile__img-wrapper">
-                        <img src="b6a932b6269cf10d3339.svg" alt="security shield">
-                    </div>
-                    <h3 class="tile__title">Security you can trust</h3>
-                    <p class="tile__description">2-factor authentication and user-controlled encryption are just a couple of the security features we allow to help secure your files.</p>
-                </section>
-                <section class="tile">
-                    <div class="tile__img-wrapper">
-                        <img src="6c80c0a4c84274f029eb.svg" alt="three people with clock">
-                    </div>
-                    <h3 class="tile__title">Real-time collaboration</h3>
-                    <p class="tile__description">Securely share files and folders with friends, family and colleagues for live collaboration. No email attachments required.</p>
-                </section>
-                <section class="tile">
-                    <div class="tile__img-wrapper">
-                        <img src="fc9b91ba9923102f3aa4.svg" alt="files">
-                    </div>
-                    <h3 class="tile__title">Store any type of file</h3>
-                    <p class="tile__description">Whether you're sharing holidays photos or work documents, Fylo has you covered allowing for all file types to be securely stored and shared.</p>
-                </section>
-            </div>
-        </section>
-        <section class="location">
-            <div class="l-flex">
-                <div class="location__img-wrapper">
-                    <img src="5d7a50ea74b08000cd67.png" alt="people talking to each other via internet">
-                </div>
-                <article class="location__text-wrapper">
-                    <h2 class="location__title">Stay productive, wherever you are</h2>
-                    <p class="location__description">Never let location be an issue when accessing your files. Fylo has you covered for all of your file storage needs.</p>
-                    <p class="location__description">Securely share files and folders with friends, family and colleagues for live collaboration. No email attachments required.</p>
-                    <div class="location__anchor-wrapper">
-                        <a href="" class="location__link">See how Fylo works</a>
-                        <img src="2491a46a96689783ec3c.svg" alt="arrow in circle">
-                    </div>
-                </article>
-            </div>
-        </section>
-        <section class="opinions">
-            <div class="l-flex">
-
-                <article class="tile">
-                    <div class="opinions__quote-sign-wrapper">
-                        <img src="6b757a5bc26a14e62b3e.png" alt="quote sign">
-                    </div>
-                    <p class="tile__opinion">Fylo has improved our team productivity by an order of magnitude. Since making the switch our team has become a well-oiled collaboration machine.</p>
-                    <div class="l-flex">
-                        <div class="tile__author-img-wrapper">
-                            <img src="db96204a6358e444af70.jpg" alt="man in red t-shirt" class="tile__author-img-wrapper">
-                        </div>
-                        <div class="tile__author-flex">
-                            <h3 class="tile__author-name">Satish Patel</h3>
-                            <p class="tile__author-job-position">Founder & CEO, Huddle</p>
-                        </div>
-                    </div>
-                </article>
-                <article class="tile">
-                    <p class="tile__opinion">Fylo has improved our team productivity by an order of magnitude. Since making the switch our team has become a well-oiled collaboration machine.</p>
-                    <div class="l-flex">
-                        <div class="tile__author-img-wrapper">
-                            <img src="cded0d942ff61792e0c7.jpg" alt="happy male" class="tile__author-img-wrapper">
-                        </div>
-                        <div class="tile__author-flex">
-                            <h3 class="tile__author-name">Bruce McKenzie</h3>
-                            <p class="tile__author-job-position">Founder & CEO, Huddle</p>
-                        </div>
-                    </div>
-                </article>
-                <article class="tile">
-                    <p class="tile__opinion">Fylo has improved our team productivity by an order of magnitude. Since making the switch our team has become a well-oiled collaboration machine.
-                    </p>
-                    <div class="l-flex">
-                        <div class="tile__author-img-wrapper">
-                            <img src="8d52cbc709ba483a0ad6.jpg" alt="dark hair female" class="tile__author-img-wrapper">
-                        </div>
-                        <div class="tile__author-flex">
-                            <h3 class="tile__author-name">Iva Boyd</h3>
-                            <p class="tile__author-job-position">Founder & CEO, Huddle</p>
-                        </div>
-                    </div>
-                </article>
-            </div>
-        </section>
-        <section class="early-access">
-            <h2 class="early-access__title">Get early access today</h2>
-            <p class="early-access__description">It only takes a minute to sign up and our free starter tier is extremely generous. If you have any questions, our support team would be happy to help you.</p>
-            <form action="/" class="early-access__form">
-                <input class="early-access__email-input" type="email" placeholder="email@example.com">
-                <button type="submit" class="early-access__submit-button blue-button">Get Started For Free</button>
-            </form>
-        </section>
-    </main>
-    <footer class="footer">
-        <div class="max-container">
-            <div class="logo logo--footer">
-                <img src="f5363383bf279490c4ab.svg" alt="company">
-            </div>
-            <div class="l-flex">
-                <div class="footer__location">
-                    <img src="a681f02d94e561498fa0.svg" alt="location pin">
-                    <p class="footer__location-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
-                </div>
-                <ul class="footer__contact-list">
-                    <li>
-                        <i class="fas fa-phone"></i>
-                        <p class="footer__phone_number">+1-543-123-4567</p>
-                    </li>
-                    <li>
-                        <i class="fas fa-envelope"></i>
-                        <p class="footer__email">example@fylo.com</p>
-                    </li>
-                </ul>
-                <ul class="footer__menu">
-                    <li><a href="">About Us</a></li>
-                    <li><a href="">Jobs</a></li>
-                    <li><a href="">Press</a></li>
-                    <li><a href="">Blog</a></li>
-                    <li><a href="">Contact Us</a></li>
-                    <li><a href="">Terms</a></li>
-                    <li><a href="">Privacy</a></li>
-                </ul>
-                <ul class="footer__social-media">
-                    <li>
-                        <i class="fab fa-facebook"></i>
-                    </li>
-                    <li>
-                        <i class="fab fa-twitter"></i>
-                    </li>
-                    <li>
-                        <i class="fab fa-instagram"></i>
-                    </li>
-                </ul>
-            </div>
-
-        </div>
-    </footer>
-</body>
-
-</html>
+<head><script defer src="bundle.js"></script></head>Html Webpack Plugin:
+<pre>
+  Error: Child compilation failed:
+  Module not found: Error: Can't resolve './images/favicon-32x32.png' in 'C:\Users\user\Desktop\General-Front-End\LayoutChallenges'
+  ModuleNotFoundError: Module not found: Error: Can't resolve './images/favicon-32x32.png' in 'C:\Users\user\Desktop\General-Front-End\LayoutChallenges'
+      at C:\Users\user\Desktop\General-Front-End\LayoutChallenges\node_modules\webpack\lib\Compilation.js:2011:28
+      at C:\Users\user\Desktop\General-Front-End\LayoutChallenges\node_modules\webpack\lib\NormalModuleFactory.js:795:13
+      at eval (eval at create (C:\Users\user\Desktop\General-Front-End\LayoutChallenges\node_modules\tapable\lib\HookCodeFactory.js:33:10), <anonymous>:10:1)
+      at C:\Users\user\Desktop\General-Front-End\LayoutChallenges\node_modules\webpack\lib\NormalModuleFactory.js:275:22
+      at eval (eval at create (C:\Users\user\Desktop\General-Front-End\LayoutChallenges\node_modules\tapable\lib\HookCodeFactory.js:33:10), <anonymous>:9:1)
+      at C:\Users\user\Desktop\General-Front-End\LayoutChallenges\node_modules\webpack\lib\NormalModuleFactory.js:431:22
+      at C:\Users\user\Desktop\General-Front-End\LayoutChallenges\node_modules\webpack\lib\NormalModuleFactory.js:124:11
+      at C:\Users\user\Desktop\General-Front-End\LayoutChallenges\node_modules\webpack\lib\NormalModuleFactory.js:667:25
+      at C:\Users\user\Desktop\General-Front-End\LayoutChallenges\node_modules\webpack\lib\NormalModuleFactory.js:852:8
+      at C:\Users\user\Desktop\General-Front-End\LayoutChallenges\node_modules\webpack\lib\NormalModuleFactory.js:972:5
+  
+  - Compilation.js:2011 
+    [LayoutChallenges]/[webpack]/lib/Compilation.js:2011:28
+  
+  - NormalModuleFactory.js:795 
+    [LayoutChallenges]/[webpack]/lib/NormalModuleFactory.js:795:13
+  
+  
+  - NormalModuleFactory.js:275 
+    [LayoutChallenges]/[webpack]/lib/NormalModuleFactory.js:275:22
+  
+  
+  - NormalModuleFactory.js:431 
+    [LayoutChallenges]/[webpack]/lib/NormalModuleFactory.js:431:22
+  
+  - NormalModuleFactory.js:124 
+    [LayoutChallenges]/[webpack]/lib/NormalModuleFactory.js:124:11
+  
+  - NormalModuleFactory.js:667 
+    [LayoutChallenges]/[webpack]/lib/NormalModuleFactory.js:667:25
+  
+  - NormalModuleFactory.js:852 
+    [LayoutChallenges]/[webpack]/lib/NormalModuleFactory.js:852:8
+  
+  - NormalModuleFactory.js:972 
+    [LayoutChallenges]/[webpack]/lib/NormalModuleFactory.js:972:5
+  
+  - child-compiler.js:169 
+    [LayoutChallenges]/[html-webpack-plugin]/lib/child-compiler.js:169:18
+  
+  - Compiler.js:559 
+    [LayoutChallenges]/[webpack]/lib/Compiler.js:559:11
+  
+  - Compiler.js:1129 
+    [LayoutChallenges]/[webpack]/lib/Compiler.js:1129:17
+  
+  
+  - Hook.js:18 Hook.CALL_ASYNC_DELEGATE [as _callAsync]
+    [LayoutChallenges]/[tapable]/lib/Hook.js:18:14
+  
+  - Compiler.js:1125 
+    [LayoutChallenges]/[webpack]/lib/Compiler.js:1125:33
+  
+  - Compilation.js:2782 finalCallback
+    [LayoutChallenges]/[webpack]/lib/Compilation.js:2782:11
+  
+  - Compilation.js:3087 
+    [LayoutChallenges]/[webpack]/lib/Compilation.js:3087:11
+  
+  
+  - Hook.js:18 Hook.CALL_ASYNC_DELEGATE [as _callAsync]
+    [LayoutChallenges]/[tapable]/lib/Hook.js:18:14
+  
+</pre>

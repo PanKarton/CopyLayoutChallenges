@@ -11,41 +11,28 @@ The designs were created to the following widths:
 
 ### Primary
 
-- Dark Blue (intro and email sign up background): hsl(217, 28%, 15%)
-- Dark Blue (main background): hsl(218, 28%, 13%)
-- Dark Blue (footer background): hsl(216, 53%, 9%)
-- Dark Blue (testimonials background): hsl(219, 30%, 18%)
-
-### Accent
-
-- Cyan (inside call-to-action gradient): hsl(176, 68%, 64%)
-- Blue (inside call-to-action gradient): hsl(198, 60%, 50%)
-- Light Red (error): hsl(0, 100%, 63%)
+- Soft Cyan (Full Slider Bar): hsl(174, 77%, 80%)
+- Strong Cyan (Slider Backround): hsl(174, 86%, 45%)
+- Light Grayish Red (Discount Background): hsl(14, 92%, 95%)
+- Light Red (Discount Text): hsl(15, 100%, 70%)
+- Pale Blue (CTA Text): hsl(226, 100%, 87%)
 
 ### Neutral
 
-- White: hsl(0, 0%, 100%)
+- White (Pricing Component Background): hsl (0, 0%, 100%)
+- Very Pale Blue (Main Background): hsl(230, 100%, 99%)
+- Light Grayish Blue (Empty Slider Bar): hsl(224, 65%, 95%)
+- Light Grayish Blue (Toggle Background): hsl(223, 50%, 87%)
+- Grayish Blue (Text): hsl(225, 20%, 60%)
+- Dark Desaturated Blue (Text & CTA Background): hsl(227, 35%, 25%)
 
 ## Typography
 
 ### Body Copy
 
-- Font size: 14px
+- Font size (Introductory Paragraph): 15px
 
-### Headings, Call-to-actions, Header Navigation
+### Font
 
-- Family: [Raleway](https://fonts.google.com/specimen/Raleway)
-- Weights: 400, 700
-
-### Body
-
-- Family: [Open Sans](https://fonts.google.com/specimen/Open+Sans)
-- Weights: 400, 700
-
-## Icons
-
-For the social icons, you can use a font icon library. Some suggestions can be found below:
-
-- [Font Awesome](https://fontawesome.com/)
-- [IcoMoon](https://icomoon.io/)
-- [Ionicons](https://ionicons.com/)
+- Family: [Manrope](https://fonts.google.com/specimen/Manrope)
+- Weights: 600, 800
