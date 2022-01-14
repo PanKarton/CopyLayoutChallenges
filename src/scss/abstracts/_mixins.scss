@@ -13,12 +13,6 @@
     font-weight: $weight;
 }
 
-@mixin transparent-button {
-    background-color: transparent;
-    border: none;
-    border-radius: 15px;
-}
-
 @mixin medium-screen {
     @media only screen and (max-width: 60rem) {
         @content;

@@ -1,20 +1,5 @@
 @use '../abstracts/' as *;
-body {}
-
-img {
-    max-width: 100%;
-}
-
-main {
-    background-color: $bgc-main;
-    position: relative;
-}
-
-ul {
-    list-style: none;
-}
-
-a {
-    text-decoration: none;
-    color: $gray-d;
+body {
+    display: grid;
+    place-items: center;
 }

@@ -1,69 +1,57 @@
-<head><script defer src="bundle.js"></script></head>Html Webpack Plugin:
-<pre>
-  Error: Child compilation failed:
-  Module not found: Error: Can't resolve './images/favicon-32x32.png' in 'C:\Users\user\Desktop\General-Front-End\LayoutChallenges'
-  ModuleNotFoundError: Module not found: Error: Can't resolve './images/favicon-32x32.png' in 'C:\Users\user\Desktop\General-Front-End\LayoutChallenges'
-      at C:\Users\user\Desktop\General-Front-End\LayoutChallenges\node_modules\webpack\lib\Compilation.js:2011:28
-      at C:\Users\user\Desktop\General-Front-End\LayoutChallenges\node_modules\webpack\lib\NormalModuleFactory.js:795:13
-      at eval (eval at create (C:\Users\user\Desktop\General-Front-End\LayoutChallenges\node_modules\tapable\lib\HookCodeFactory.js:33:10), <anonymous>:10:1)
-      at C:\Users\user\Desktop\General-Front-End\LayoutChallenges\node_modules\webpack\lib\NormalModuleFactory.js:275:22
-      at eval (eval at create (C:\Users\user\Desktop\General-Front-End\LayoutChallenges\node_modules\tapable\lib\HookCodeFactory.js:33:10), <anonymous>:9:1)
-      at C:\Users\user\Desktop\General-Front-End\LayoutChallenges\node_modules\webpack\lib\NormalModuleFactory.js:431:22
-      at C:\Users\user\Desktop\General-Front-End\LayoutChallenges\node_modules\webpack\lib\NormalModuleFactory.js:124:11
-      at C:\Users\user\Desktop\General-Front-End\LayoutChallenges\node_modules\webpack\lib\NormalModuleFactory.js:667:25
-      at C:\Users\user\Desktop\General-Front-End\LayoutChallenges\node_modules\webpack\lib\NormalModuleFactory.js:852:8
-      at C:\Users\user\Desktop\General-Front-End\LayoutChallenges\node_modules\webpack\lib\NormalModuleFactory.js:972:5
-  
-  - Compilation.js:2011 
-    [LayoutChallenges]/[webpack]/lib/Compilation.js:2011:28
-  
-  - NormalModuleFactory.js:795 
-    [LayoutChallenges]/[webpack]/lib/NormalModuleFactory.js:795:13
-  
-  
-  - NormalModuleFactory.js:275 
-    [LayoutChallenges]/[webpack]/lib/NormalModuleFactory.js:275:22
-  
-  
-  - NormalModuleFactory.js:431 
-    [LayoutChallenges]/[webpack]/lib/NormalModuleFactory.js:431:22
-  
-  - NormalModuleFactory.js:124 
-    [LayoutChallenges]/[webpack]/lib/NormalModuleFactory.js:124:11
-  
-  - NormalModuleFactory.js:667 
-    [LayoutChallenges]/[webpack]/lib/NormalModuleFactory.js:667:25
-  
-  - NormalModuleFactory.js:852 
-    [LayoutChallenges]/[webpack]/lib/NormalModuleFactory.js:852:8
-  
-  - NormalModuleFactory.js:972 
-    [LayoutChallenges]/[webpack]/lib/NormalModuleFactory.js:972:5
-  
-  - child-compiler.js:169 
-    [LayoutChallenges]/[html-webpack-plugin]/lib/child-compiler.js:169:18
-  
-  - Compiler.js:559 
-    [LayoutChallenges]/[webpack]/lib/Compiler.js:559:11
-  
-  - Compiler.js:1129 
-    [LayoutChallenges]/[webpack]/lib/Compiler.js:1129:17
-  
-  
-  - Hook.js:18 Hook.CALL_ASYNC_DELEGATE [as _callAsync]
-    [LayoutChallenges]/[tapable]/lib/Hook.js:18:14
-  
-  - Compiler.js:1125 
-    [LayoutChallenges]/[webpack]/lib/Compiler.js:1125:33
-  
-  - Compilation.js:2782 finalCallback
-    [LayoutChallenges]/[webpack]/lib/Compilation.js:2782:11
-  
-  - Compilation.js:3087 
-    [LayoutChallenges]/[webpack]/lib/Compilation.js:3087:11
-  
-  
-  - Hook.js:18 Hook.CALL_ASYNC_DELEGATE [as _callAsync]
-    [LayoutChallenges]/[tapable]/lib/Hook.js:18:14
-  
-</pre>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- displays site properly based on user's device -->
+
+    <link rel="icon" type="image/png" sizes="32x32" href="736eae1ff09acfe04c50.png">
+
+    <title>Frontend Mentor | Interactive pricing component</title>
+<script defer src="bundle.js"></script></head>
+
+<body>
+    <div class="frame">
+        <div class="header">
+            <h1 class="header__title">Simple, traffic-based pricing</h1>
+            <p class="header__description">Sign-up for our 30-day trial. No credit card required.</p>
+        </div>
+        <section class="trial-picker">
+            <div class="trial-picker__price-picker">
+                <div class="trial-picker__pageviews">100k pagewievs</div>
+                <div class="trial-picker__price">
+                    <span class="value">$<span class="dolars">16</span>.00</span>/<span class="frequency">month</span>
+                    <input type="range" class="trial-picker__input" min="0" max="100">
+                </div>
+            </div>
+            <div class="trial-picker__frequency-picker">
+                Monthly Billing
+                <label class="trial-picker__switch">
+                  <input type="checkbox">
+                  <span class="trial-picker__slider"></span>
+                </label> Yearly Billing
+                <span class="trail-picker__discount">25% discount</span>
+            </div>
+            <div class="l-flex">
+                <ul class="trial-picker__benefits">
+                    <li>
+                        <img src="83c38a48815855ecc2d7.svg" alt="check icon">
+                        <p>Unlimited websites</p>
+                    </li>
+                    <li>
+                        <img src="83c38a48815855ecc2d7.svg" alt="check icon">
+                        <p>100% data ownership</p>
+                    </li>
+                    <li>
+                        <img src="83c38a48815855ecc2d7.svg" alt="check icon">
+                        <p>Email reports</p>
+                    </li>
+                </ul>
+                <button class="trial-picker__start-button">Start my trial</button>
+            </div>
+        </section>
+    </div>
+</body>
+
+</html>
