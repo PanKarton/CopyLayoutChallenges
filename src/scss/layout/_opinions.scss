@@ -1,6 +1,7 @@
 @use '../abstracts/' as *;
 .opinions {
-    padding: 10rem 0;
+    padding-top: 10rem;
+    padding-bottom: 18rem;
     &>.l-flex {
         position: relative;
         @include flex($gap: 2rem);
