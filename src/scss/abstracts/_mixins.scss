@@ -19,8 +19,14 @@
     border-radius: 15px;
 }
 
-@mixin small-screen {
+@mixin medium-screen {
     @media only screen and (max-width: 60rem) {
+        @content;
+    }
+}
+
+@mixin small-screen {
+    @media only screen and (max-width: 40rem) {
         @content;
     }
 }

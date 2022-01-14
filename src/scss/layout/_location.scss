@@ -5,7 +5,7 @@
         width: 90vw;
         margin: 0 auto;
         @include flex($gap: 4rem);
-        @include small-screen {
+        @include medium-screen {
             flex-direction: column;
             gap: 3rem;
         }
