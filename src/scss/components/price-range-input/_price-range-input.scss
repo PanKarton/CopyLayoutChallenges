@@ -1,0 +1,9 @@
+@use '../../abstracts/' as *;
+input[type="range"].price-range-input {
+    --thumbPosition: 55;
+    background: linear-gradient(90deg, $soft-cyan calc(var(--thumbPosition) * 1%), $light-grayish-blue calc(var(--thumbPosition) * 1%));
+    @include slider-bar;
+    &::-webkit-slider-thumb {
+        @include thumb();
+    }
+}

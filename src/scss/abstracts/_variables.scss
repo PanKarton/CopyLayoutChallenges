@@ -1,17 +1,18 @@
 // primary colors
-$soft-cyan: (174, 77%, 80%); //full slider bar
+$soft-cyan: hsl(174, 77%, 80%); //full slider bar
 $strong-cyan: hsl(174, 86%, 45%); //slider background
 $light-grayish-red: hsl(14, 92%, 95%); //discount background
 $light-red: hsl(15, 100%, 70%); //discount text
 $pale-blue: hsl(226, 100%, 87%); //cta text
 // neutral colors
-$wwhite: hsl (0, 0%, 100%); //Pricing Component Background
+$white: hsl(0, 0%, 100%); //Pricing Component Background
+$black: hsl(0, 0%, 0%); //Body Background
 $very-pale-blue: hsl(230, 100%, 99%); //Main Background
-$light-grayish-blue: hsl(224, 65%, 95%); // Empty Slider Bar
-$light-grayish-blue: hsl(223, 50%, 87%); //Toggle Background
+$light-grayish-blue: hsl(224, 65%, 95%); // Empty Slider Bar / Toggle Background
 $grayish-blue: hsl(225, 20%, 60%); //Text
 $dark-desaturated-blue: hsl(227, 35%, 25%); //Text & CTA Background
 // typography
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@600;800&display=swap');
 $ff-primary: 'Manrope',
 sans-serif;
+$fs-main: 15px;

@@ -1,0 +1,10 @@
+@use '../abstracts/' as *;
+.frame {
+    @include flex($direction: column);
+    width: min(1440px, 90vw);
+    height: 85vh;
+    background-color: $very-pale-blue;
+    background-image: url('../img/bg-pattern.svg');
+    background-size: 1440px;
+    background-repeat: no-repeat;
+}

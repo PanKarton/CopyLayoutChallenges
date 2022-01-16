@@ -1,5 +1,11 @@
 @use '../abstracts/' as *;
 body {
+    height: 100vh;
     display: grid;
     place-items: center;
+    background-color: $black;
+}
+
+ul {
+    list-style-type: none;
 }

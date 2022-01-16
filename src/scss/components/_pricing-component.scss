@@ -1,0 +1,70 @@
+@use '../abstracts/' as *;
+.pricing-component {
+    width: min(34rem, 90%);
+    .heading {
+        position: relative;
+        text-align: center;
+        @include typography($size: 1.2rem, $color: $dark-desaturated-blue, $weight: 600);
+        &__title {
+            position: relative;
+            z-index: 99;
+        }
+        &__description {
+            position: relative;
+            z-index: 99;
+            font-size: $fs-main;
+            color: $grayish-blue;
+            margin-top: .5rem;
+        }
+        &__circles-wrapper {
+            position: absolute;
+            width: 9.125rem;
+            top: 0;
+            left: 50%;
+            transform: translate(-50%, -30%);
+            img {
+                max-width: 100%;
+            }
+        }
+    }
+    .window {
+        border-radius: 10px;
+        padding: 2rem 3rem;
+        background-color: $white;
+        box-shadow: 0 1rem 1rem 1rem transparentize($color: $black, $amount: .95);
+        margin-top: 5rem;
+        &__price-picker {
+            display: grid;
+            row-gap: 1.5rem;
+            grid-template-areas: "wievs price" "input input";
+        }
+        &__pageviews {
+            @include typography($color: $grayish-blue, $weight: 600);
+            @include flex($justify: flex-start);
+            grid-area: wievs;
+        }
+        &__price {
+            @include typography($color: $grayish-blue, $weight: 800);
+            @include flex($justify: flex-end, $gap: .2rem);
+            grid-area: price;
+            .value {
+                @include typography($size: 2.5rem, $color: $dark-desaturated-blue, $weight: 800);
+            }
+        }
+        &__input-wrapper {
+            grid-area: input;
+        }
+        &__frequency-picker {
+            @include flex($justify: flex-end);
+            @include typography($size: .75rem, $weight: 600);
+            padding: 2rem 1rem;
+        }
+        &__discount {
+            display: inline-block;
+            color: $light-red;
+            background-color: lighten($light-red, 25%);
+            border-radius: 100px;
+            padding: .125rem .5rem;
+        }
+    }
+}

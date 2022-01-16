@@ -1,0 +1,8 @@
+@use '../abstracts/' as *;
+.cta-button {
+    background-color: $dark-desaturated-blue;
+    border-radius: 10000px;
+    border: none;
+    padding: .7rem 3rem;
+    @include typography($color: $pale-blue, $weight: 800);
+}
