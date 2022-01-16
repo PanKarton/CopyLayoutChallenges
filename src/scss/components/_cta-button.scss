@@ -4,5 +4,9 @@
     border-radius: 10000px;
     border: none;
     padding: .7rem 3rem;
+    cursor: pointer;
     @include typography($color: $pale-blue, $weight: 800);
+    &:hover {
+        color: lighten($color: $pale-blue, $amount: 10%);
+    }
 }

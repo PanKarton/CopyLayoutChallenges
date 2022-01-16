@@ -51,3 +51,7 @@
     border: none;
     border-radius: 100px;
 }
+
+@mixin horizontal-padding {
+    padding: 0 clamp(1.5rem, 7vw, 3rem);
+}
