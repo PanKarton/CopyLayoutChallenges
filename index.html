@@ -1,87 +1,208 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | [Challenge Name Here]</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="./src/img/favicon-32x32.png">
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+    <title>Frontend Mentor | Pan Karton</title>
 </head>
+
 <body>
-
-  Social Media Dashboard
-  Total Followers: 23,004
-
-  Dark Mode
-
-  
-
-  @nathanf
-  1987
-  Followers
-  12 Today
-
-  @nathanf
-  1044
-  Followers
-  99 Today
-
-  @realnathanf
-  11k
-  Followers
-  1099 Today
-
-  Nathan F.
-  8239
-  Subscribers
-  144 Today
-
-
-
-  Overview - Today
-
-  Page Views
-  87
-  3%
-
-  Likes
-  52
-  2%
-
-  Likes
-  5462
-  2257%
-
-  Profile Views
-  52k
-  1375%
-
-  Retweets
-  117
-  303%
-
-  Likes
-  507
-  553%
-
-  Likes
-  107
-  19%
-
-  Total Views
-  1407
-  12%
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+    <div class="frame">
+        <header class="header">
+            <div class="header__heading-wrapper">
+                <h1 class="header__title">Social Media Dashboard</h1>
+                <p class="header__followers-counter">Total Followers: 23,004</p>
+            </div>
+            <div class="header__theme-switcher-wrapper">
+                <p class="header__theme-name">Dark Mode</p>
+                <input class="toggle-switch-component" type="checkbox">
+            </div>
+        </header>
+        <main>
+            <section class="followers-stats-wrapper l-flex">
+                <div class="followers-card followers-card--facebook">
+                    <div class="followers-card__social-medium">
+                        <div class="followers-card__sm-logo-wrapper">
+                            <img src="./src/img/icon-facebook.svg" alt="facebook logo blue letter f">
+                        </div>
+                        <p class="followers-card__sm-name">@pankarton</p>
+                    </div>
+                    <p class="followers-card__followers-counter">1987</p>
+                    <p class="followers-card__followers-word">Followers</p>
+                    <div class="followers-card__followers-inctease-wrapper">
+                        <div class="followers-card__arrow-img-wrapper">
+                            <img src="./src/img/icon-up.svg" alt="arrow up">
+                        </div>
+                        <p class="followers-card__daily-amount followers-card__daily-amount--increase">12 Today</p>
+                    </div>
+                </div>
+                <div class="followers-card followers-card--twitter">
+                    <div class="followers-card__social-medium">
+                        <div class="followers-card__sm-logo-wrapper">
+                            <img src="./src/img/icon-twitter.svg" alt="twitter logo blue bird">
+                        </div>
+                        <p class="followers-card__sm-name">@pankarton</p>
+                    </div>
+                    <p class="followers-card__followers-counter">1044</p>
+                    <p class="followers-card__followers-word">Followers</p>
+                    <div class="followers-card__followers-inctease-wrapper">
+                        <div class="followers-card__arrow-img-wrapper">
+                            <img src="./src/img/icon-up.svg" alt="arrow up">
+                        </div>
+                        <p class="followers-card__daily-amount followers-card__daily-amount--increase">99 Today</p>
+                    </div>
+                </div>
+                <div class="followers-card followers-card--instagram">
+                    <div class="followers-card__social-medium">
+                        <div class="followers-card__sm-logo-wrapper">
+                            <img src="./src/img/icon-instagram.svg" alt="instagram logo yellow and pink camera">
+                        </div>
+                        <p class="followers-card__sm-name">@pankarton</p>
+                    </div>
+                    <p class="followers-card__followers-counter">11k</p>
+                    <p class="followers-card__followers-word">Followers</p>
+                    <div class="followers-card__followers-inctease-wrapper">
+                        <div class="followers-card__arrow-img-wrapper">
+                            <img src="./src/img/icon-up.svg" alt="arrow up">
+                        </div>
+                        <p class="followers-card__daily-amount followers-card__daily-amount--increase">1099 Today</p>
+                    </div>
+                </div>
+                <div class="followers-card followers-card--youtube">
+                    <div class="followers-card__social-medium">
+                        <div class="followers-card__sm-logo-wrapper">
+                            <img src="./src/img/icon-facebook.svg" alt="facebook logo">
+                        </div>
+                        <p class="followers-card__sm-name">Pan Karton</p>
+                    </div>
+                    <p class="followers-card__followers-counter">8239</p>
+                    <p class="followers-card__followers-word">Followers</p>
+                    <div class="followers-card__followers-inctease-wrapper">
+                        <div class="followers-card__arrow-img-wrapper">
+                            <img src="./src/img/icon-down.svg" alt="arrow down">
+                        </div>
+                        <p class="followers-card__daily-amount followers-card__daily-amount--decrease">144 Today</p>
+                    </div>
+                </div>
+            </section>
+            <section class="today-stats">
+                <h2 class="today-stats__heading">Overview - Today</h2>
+                <div class="stats-cointainer l-flex">
+                    <div class="daily-card">
+                        <div class="daily-card__half">
+                            <h3 class="daily-card__tile">Page Views</h3>
+                            <img src="./src/img/icon-facebook.svg" alt="facebook logo blue letter f">
+                        </div>
+                        <div class="daily-card__half">
+                            <p class="daily-card__counter">87</p>
+                            <div class="daily-card__percentage-change">
+                                <img src="./src/img/icon-up.svg" alt="up arrow">
+                                <div class="daily-card__percentage daily-card__percentage--increase">3%</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="daily-card">
+                        <div class="daily-card__half">
+                            <h3 class="daily-card__tile">Likes</h3>
+                            <img src="./src/img/icon-facebook.svg" alt="facebook logo blue letter f">
+                        </div>
+                        <div class="daily-card__half">
+                            <p class="daily-card__counter">52</p>
+                            <div class="daily-card__percentage-change">
+                                <img src="./src/img/icon-down.svg" alt="down arrow">
+                                <div class="daily-card__percentage daily-card__percentage--decrease">2%</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="daily-card">
+                        <div class="daily-card__half">
+                            <h3 class="daily-card__tile">Likes</h3>
+                            <img src="./src/img/icon-instagram.svg" alt="instagram logo camera icon">
+                        </div>
+                        <div class="daily-card__half">
+                            <p class="daily-card__counter">5462</p>
+                            <div class="daily-card__percentage-change">
+                                <img src="./src/img/icon-up.svg" alt="up arrow">
+                                <div class="daily-card__percentage daily-card__percentage--increase">2257%</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="daily-card">
+                        <div class="daily-card__half">
+                            <h3 class="daily-card__tile">Profile Views</h3>
+                            <img src="./src/img/icon-instagram.svg" alt="instagram logo camera icon">
+                        </div>
+                        <div class="daily-card__half">
+                            <p class="daily-card__counter">52k</p>
+                            <div class="daily-card__percentage-change">
+                                <img src="./src/img/icon-up.svg" alt="up arrow">
+                                <div class="daily-card__percentage daily-card__percentage--increase">1375%</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="daily-card">
+                        <div class="daily-card__half">
+                            <h3 class="daily-card__tile">Retweets</h3>
+                            <img src="./src/img/icon-twitter.svg" alt="twitter logo bird icon">
+                        </div>
+                        <div class="daily-card__half">
+                            <p class="daily-card__counter">117</p>
+                            <div class="daily-card__percentage-change">
+                                <img src="./src/img/icon-up.svg" alt="up arrow">
+                                <div class="daily-card__percentage daily-card__percentage--increase">303%</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="daily-card">
+                        <div class="daily-card__half">
+                            <h3 class="daily-card__tile">Likes</h3>
+                            <img src="./src/img/icon-twitter.svg" alt="twitter logo bird icon">
+                        </div>
+                        <div class="daily-card__half">
+                            <p class="daily-card__counter">507</p>
+                            <div class="daily-card__percentage-change">
+                                <img src="./src/img/icon-up.svg" alt="up arrow">
+                                <div class="daily-card__percentage daily-card__percentage--increase">553%</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="daily-card">
+                        <div class="daily-card__half">
+                            <h3 class="daily-card__tile">Likes</h3>
+                            <img src="./src/img/icon-youtube.svg" alt="icon-youtube logo triangle in red rectangle icon">
+                        </div>
+                        <div class="daily-card__half">
+                            <p class="daily-card__counter">107</p>
+                            <div class="daily-card__percentage-change">
+                                <img src="./src/img/icon-down.svg" alt="down arrow">
+                                <div class="daily-card__percentage daily-card__percentage--decrease">19%</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="daily-card">
+                        <div class="daily-card__half">
+                            <h3 class="daily-card__tile">Total Views</h3>
+                            <img src="./src/img/icon-youtube.svg" alt="icon-youtube logo triangle in red rectangle icon">
+                        </div>
+                        <div class="daily-card__half">
+                            <p class="daily-card__counter">1407</p>
+                            <div class="daily-card__percentage-change">
+                                <img src="./src/img/icon-down.svg" alt="down arrow">
+                                <div class="daily-card__percentage daily-card__percentage--decrease">12%</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
 </body>
+
+
+
 </html>
