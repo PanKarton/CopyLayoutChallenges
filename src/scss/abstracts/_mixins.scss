@@ -1,4 +1,4 @@
-@use 'variables' as v;
+@use 'variables' as *;
 @mixin flex($direction: row, $justify: center, $align: center, $gap: 0) {
     display: flex;
     flex-direction: $direction;
@@ -7,7 +7,7 @@
     gap: $gap;
 }
 
-@mixin typography($family: v.$ff-primary, $size: v.$fs-main, $color: v.$grayish-blue, $weight: 600) {
+@mixin typography($family: $ff-primary, $size: $fs-primary, $color, $weight: 400) {
     font-family: $family;
     font-size: $size;
     color: $color;
@@ -23,5 +23,15 @@
 @mixin small-screen {
     @media only screen and (max-width: 40rem) {
         @content;
+    }
+}
+
+@mixin increase {
+    @include typography($size: .75rem, $color: var(--color-secondary), $weight: 600);
+    &--increase {
+        color: $lime-green;
+    }
+    &--decrease {
+        color: $bright-red;
     }
 }

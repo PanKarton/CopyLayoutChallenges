@@ -1,0 +1,28 @@
+.toggle-switch-component {
+    width: 3rem;
+    height: 1.5rem;
+    background: var(--toggle-color);
+    border-radius: 10000px;
+    position: relative;
+    cursor: pointer;
+    input[type="checkbox"] {
+        display: none;
+    }
+    .slider {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(calc(var(--toggle-slider-position)*1%), -50%);
+        transition: transform .25s ease-in-out;
+        height: 1.15rem;
+        aspect-ratio: 1;
+        border-radius: 50%;
+        background-color: var(--background-top);
+    }
+    &:hover {
+        background: var(--toggle-hover-color);
+        .slider {
+            background-color: var(--toggle-slider-hover-color);
+        }
+    }
+}

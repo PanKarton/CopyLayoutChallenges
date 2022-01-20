@@ -1,0 +1,20 @@
+@use '../abstracts/' as *;
+.header {
+    @include flex($justify: space-between);
+    &__heading-wrapper {}
+    &__title {
+        @include typography($size: 2rem, $color: var(--color-primary), $weight: 600);
+    }
+    &__followers-counter {
+        @include typography($size: $fs-primary, $color: var(--color-secondary), $weight: 600);
+    }
+    &__theme-switcher-wrapper {
+        @include flex($direction: row-reverse, $justify: space-between, $gap: .5rem);
+    }
+    &__theme-name {
+        @include typography($size: $fs-primary, $color: var(--color-secondary), $weight: 600);
+    }
+    .toggle-switch-component:hover~.header__theme-name {
+        color: var(--theme-name-color-hover);
+    }
+}

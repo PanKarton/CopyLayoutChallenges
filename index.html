@@ -12,15 +12,18 @@
 </head>
 
 <body>
-    <div class="frame">
+    <div class="social-media-dashboard">
         <header class="header">
             <div class="header__heading-wrapper">
                 <h1 class="header__title">Social Media Dashboard</h1>
                 <p class="header__followers-counter">Total Followers: 23,004</p>
             </div>
             <div class="header__theme-switcher-wrapper">
+                <label data-toggle-switch class="toggle-switch-component">
+                    <input type="checkbox">
+                    <span class="slider"></span>
+                </label>
                 <p class="header__theme-name">Dark Mode</p>
-                <input class="toggle-switch-component" type="checkbox">
             </div>
         </header>
         <main>
@@ -32,8 +35,10 @@
                         </div>
                         <p class="followers-card__sm-name">@pankarton</p>
                     </div>
-                    <p class="followers-card__followers-counter">1987</p>
-                    <p class="followers-card__followers-word">Followers</p>
+                    <div class="followers-card_followers-counter">
+                        <p class="followers-card__followers-number">1987</p>
+                        <p class="followers-card__followers-word">Followers</p>
+                    </div>
                     <div class="followers-card__followers-inctease-wrapper">
                         <div class="followers-card__arrow-img-wrapper">
                             <img src="./src/img/icon-up.svg" alt="arrow up">
@@ -48,8 +53,10 @@
                         </div>
                         <p class="followers-card__sm-name">@pankarton</p>
                     </div>
-                    <p class="followers-card__followers-counter">1044</p>
-                    <p class="followers-card__followers-word">Followers</p>
+                    <div class="followers-card_followers-counter">
+                        <p class="followers-card__followers-number">1044</p>
+                        <p class="followers-card__followers-word">Followers</p>
+                    </div>
                     <div class="followers-card__followers-inctease-wrapper">
                         <div class="followers-card__arrow-img-wrapper">
                             <img src="./src/img/icon-up.svg" alt="arrow up">
@@ -64,8 +71,10 @@
                         </div>
                         <p class="followers-card__sm-name">@pankarton</p>
                     </div>
-                    <p class="followers-card__followers-counter">11k</p>
-                    <p class="followers-card__followers-word">Followers</p>
+                    <div class="followers-card_followers-counter">
+                        <p class="followers-card__followers-number">11k</p>
+                        <p class="followers-card__followers-word">Followers</p>
+                    </div>
                     <div class="followers-card__followers-inctease-wrapper">
                         <div class="followers-card__arrow-img-wrapper">
                             <img src="./src/img/icon-up.svg" alt="arrow up">
@@ -80,8 +89,10 @@
                         </div>
                         <p class="followers-card__sm-name">Pan Karton</p>
                     </div>
-                    <p class="followers-card__followers-counter">8239</p>
-                    <p class="followers-card__followers-word">Followers</p>
+                    <div class="followers-card_followers-counter">
+                        <p class="followers-card__followers-number">8239</p>
+                        <p class="followers-card__followers-word">Followers</p>
+                    </div>
                     <div class="followers-card__followers-inctease-wrapper">
                         <div class="followers-card__arrow-img-wrapper">
                             <img src="./src/img/icon-down.svg" alt="arrow down">
@@ -92,7 +103,7 @@
             </section>
             <section class="today-stats">
                 <h2 class="today-stats__heading">Overview - Today</h2>
-                <div class="stats-cointainer l-flex">
+                <div class="today-stats__cointainer l-flex">
                     <div class="daily-card">
                         <div class="daily-card__half">
                             <h3 class="daily-card__tile">Page Views</h3>
@@ -102,7 +113,7 @@
                             <p class="daily-card__counter">87</p>
                             <div class="daily-card__percentage-change">
                                 <img src="./src/img/icon-up.svg" alt="up arrow">
-                                <div class="daily-card__percentage daily-card__percentage--increase">3%</div>
+                                <div class="daily-card__percentage-number daily-card__percentage-number--increase">3%</div>
                             </div>
                         </div>
                     </div>
@@ -115,7 +126,7 @@
                             <p class="daily-card__counter">52</p>
                             <div class="daily-card__percentage-change">
                                 <img src="./src/img/icon-down.svg" alt="down arrow">
-                                <div class="daily-card__percentage daily-card__percentage--decrease">2%</div>
+                                <div class="daily-card__percentage-number daily-card__percentage-number--decrease">2%</div>
                             </div>
                         </div>
                     </div>
@@ -128,7 +139,7 @@
                             <p class="daily-card__counter">5462</p>
                             <div class="daily-card__percentage-change">
                                 <img src="./src/img/icon-up.svg" alt="up arrow">
-                                <div class="daily-card__percentage daily-card__percentage--increase">2257%</div>
+                                <div class="daily-card__percentage-number daily-card__percentage-number--increase">2257%</div>
                             </div>
                         </div>
                     </div>
@@ -141,7 +152,7 @@
                             <p class="daily-card__counter">52k</p>
                             <div class="daily-card__percentage-change">
                                 <img src="./src/img/icon-up.svg" alt="up arrow">
-                                <div class="daily-card__percentage daily-card__percentage--increase">1375%</div>
+                                <div class="daily-card__percentage-number daily-card__percentage-number--increase">1375%</div>
                             </div>
                         </div>
                     </div>
@@ -154,7 +165,7 @@
                             <p class="daily-card__counter">117</p>
                             <div class="daily-card__percentage-change">
                                 <img src="./src/img/icon-up.svg" alt="up arrow">
-                                <div class="daily-card__percentage daily-card__percentage--increase">303%</div>
+                                <div class="daily-card__percentage-number daily-card__percentage-number--increase">303%</div>
                             </div>
                         </div>
                     </div>
@@ -167,7 +178,7 @@
                             <p class="daily-card__counter">507</p>
                             <div class="daily-card__percentage-change">
                                 <img src="./src/img/icon-up.svg" alt="up arrow">
-                                <div class="daily-card__percentage daily-card__percentage--increase">553%</div>
+                                <div class="daily-card__percentage-number daily-card__percentage-number--increase">553%</div>
                             </div>
                         </div>
                     </div>
@@ -180,7 +191,7 @@
                             <p class="daily-card__counter">107</p>
                             <div class="daily-card__percentage-change">
                                 <img src="./src/img/icon-down.svg" alt="down arrow">
-                                <div class="daily-card__percentage daily-card__percentage--decrease">19%</div>
+                                <div class="daily-card__percentage-number daily-card__percentage-number--decrease">19%</div>
                             </div>
                         </div>
                     </div>
@@ -193,7 +204,7 @@
                             <p class="daily-card__counter">1407</p>
                             <div class="daily-card__percentage-change">
                                 <img src="./src/img/icon-down.svg" alt="down arrow">
-                                <div class="daily-card__percentage daily-card__percentage--decrease">12%</div>
+                                <div class="daily-card__percentage-number daily-card__percentage-number--decrease">12%</div>
                             </div>
                         </div>
                     </div>

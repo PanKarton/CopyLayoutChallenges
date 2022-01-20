@@ -1,0 +1,37 @@
+@use '../abstracts/' as *;
+.social-media-dashboard {
+    width: min(1440px, 100vw);
+    min-height: 100vh;
+    background-size: 1440px;
+    background-repeat: no-repeat;
+    position: relative;
+    background-color: var(--background);
+    padding: 2rem 10rem;
+    transition: background-color .35s;
+    &::before {
+        content: '';
+        position: absolute;
+        inset: 0 0 auto 0;
+        height: 20vh;
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+        background-color: var(--background-top);
+        transition: background-color .25s;
+    }
+    .followers-stats-wrapper {
+        @include flex($gap: 1.75rem);
+        flex-wrap: wrap;
+    }
+    .today-stats {
+        &__heading {
+            @include typography($size: 1.5rem, $color: var(--color-primary), $weight: 600);
+        }
+        &>*+* {
+            margin-top: 1rem;
+        }
+        &__cointainer.l-flex {
+            @include flex($gap: 1.75rem);
+            flex-wrap: wrap;
+        }
+    }
+}

@@ -1,0 +1,66 @@
+@use '../../scss/abstracts/' as a;
+.followers-card {
+    @include a.flex($direction: column, $gap: 1.2rem);
+    width: 16.1rem;
+    border-radius: 5px;
+    overflow: hidden;
+    position: relative;
+    padding: 2rem 3rem;
+    background-color: var(--card-background);
+    transition: background-color .35s;
+    cursor: pointer;
+    &::before {
+        content: '';
+        position: absolute;
+        inset: 0 0 auto 0;
+        height: .25rem;
+    }
+    &:hover {
+        background-color: var(--card-hover-background);
+    }
+    &.followers-card--facebook::before {
+        background-color: a.$facebook;
+    }
+    &.followers-card--twitter::before {
+        background-color: a.$twitter;
+    }
+    &.followers-card--instagram::before {
+        background: a.$instagram;
+    }
+    &.followers-card--youtube::before {
+        background-color: a.$youTube;
+    }
+    &__social-medium {
+        @include a.flex($gap: .5rem);
+    }
+    &__sm-logo-wrapper {
+        @include a.flex($direction: column);
+    }
+    &__sm-name {
+        @include a.typography($size: .75rem, $color: var(--color-secondary), $weight: 600);
+    }
+    &__followers-number {
+        @include a.typography($size: 3.5rem, $color: var(--color-primary), $weight: 600);
+    }
+    &__followers-word {
+        @include a.typography($size: .75rem, $color: var(--color-secondary));
+        text-transform: uppercase;
+        letter-spacing: 5px;
+        text-align: center;
+    }
+    &__followers-inctease-wrapper {
+        @include a.flex($gap: .25rem);
+    }
+    &__arrow-img-wrapper {
+        @include a.flex($direction: column);
+    }
+    &__daily-amount {
+        @include a.typography($size: .75rem, $color: var(--color-secondary), $weight: 600);
+        &--increase {
+            color: a.$lime-green;
+        }
+        &--decrease {
+            color: a.$bright-red;
+        }
+    }
+}
