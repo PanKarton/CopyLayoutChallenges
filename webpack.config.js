@@ -36,10 +36,10 @@ module.exports = {
         static: {
             directory: path.join(__dirname, 'dist'),
         },
-        liveReload: false,
-        devMiddleware: {
-            index: 'index.html',
-            writeToDisk: true,
-        }
+        liveReload: false
+            // devMiddleware: {
+            //     index: 'index.html',
+            //     writeToDisk: true,
+            // }
     }
 }

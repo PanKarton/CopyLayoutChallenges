@@ -3,7 +3,7 @@ body {
     min-height: 100vh;
     display: grid;
     place-items: center;
-    background-color: fff;
+    background-color: var(--key-backgound-1);
     &.blue-theme {
         // backgrounds
         --main-background: hsl(222, 26%, 31%);
