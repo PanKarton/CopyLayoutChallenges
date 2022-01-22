@@ -36,6 +36,8 @@ header,
 main {
     position: relative;
     z-index: 100;
+    width: min(90vw, 70rem);
+    margin: 0 auto;
 }
 
 main {

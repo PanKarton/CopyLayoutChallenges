@@ -6,7 +6,7 @@
     background-repeat: no-repeat;
     position: relative;
     background-color: var(--background);
-    padding: 2rem 10rem;
+    padding: 2rem 1rem;
     transition: background-color .35s;
     &::before {
         content: '';
@@ -19,19 +19,25 @@
         transition: background-color .25s;
     }
     .followers-stats-wrapper {
-        @include flex($gap: 1.75rem);
-        flex-wrap: wrap;
-    }
-    .today-stats {
-        &__heading {
-            @include typography($size: 1.5rem, $color: var(--color-primary), $weight: 600);
-        }
-        &>*+* {
-            margin-top: 1rem;
-        }
-        &__cointainer.l-flex {
+        @include flex($direction: column, $gap: 3rem);
+        @include cards-container-widths;
+        .l-flex {
             @include flex($gap: 1.75rem);
             flex-wrap: wrap;
         }
+    }
+}
+
+.today-stats {
+    @include cards-container-widths;
+    &__heading {
+        @include typography($size: 1.5rem, $color: var(--color-primary), $weight: 600);
+    }
+    &>*+* {
+        margin-top: 1rem;
+    }
+    &__cointainer.l-flex {
+        @include flex($gap: 1.75rem);
+        flex-wrap: wrap;
     }
 }
