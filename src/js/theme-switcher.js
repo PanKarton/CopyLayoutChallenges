@@ -1,52 +1,37 @@
-class ThemeSwitcher {
-    constructor(calculator, switcher, numbers) {
-        this.calculator = document.querySelector(`[data-calculator]`);
-        this.switcher = document.querySelector(`[data-switcher]`);
-        // this.numbers = [...document.querySelectorAll(`[data-number]`)];
-        this.numbers = [...document.querySelectorAll(`[data-number]`)];
+export default class ThemeSwitcher {
+    constructor(calculator, switcher) {
+        this.calculator = calculator;
+        this.switcher = switcher;
+
     }
-    getIndex = number => this.numbers.indexOf(number);
-    getTheme = index => {
+    getIndex = (number, array) => array.indexOf(number);
+    getThemeName = index => {
         switch (index) {
             case 0:
                 return `blue-theme`;
-                break;
             case 1:
                 return `light-theme`;
-                break;
             case 2:
                 return `purple-theme`
-                break;
         }
     }
     setThemeInStorage = theme => {
         window.localStorage.setItem(`theme`, theme);
     }
-    changeTheme = number => {
-        const index = this.getIndex(number);
-        const newTheme = this.getTheme(index);
+    changeTheme = (number, array) => {
+        const index = this.getIndex(number, array);
+        const newTheme = this.getThemeName(index);
         this.setThemeInStorage(newTheme);
         this.calculator.className = ``;
         this.calculator.classList.add(newTheme);
     }
+    changeThemeFromStorage = theme => {
+        // set theme if it's first visit on website
+        if (window.localStorage.getItem(`theme`) === null) {
+            window.localStorage.setItem(`theme`, theme);
+        }
+        const newTheme = window.localStorage.getItem('theme');
+        this.calculator.classList.add(newTheme);
+    }
 
 }
-const themeSwitcher = new ThemeSwitcher();
-
-themeSwitcher.numbers.forEach(number => {
-    number.addEventListener(`click`, () => {
-        themeSwitcher.changeTheme(number);
-    })
-});
-
-// set theme right after page load
-(() => {
-    const actualTheme = window.localStorage.getItem(`theme`);
-    if (actualTheme === `purple-theme`) {
-        console.log(`purple`);
-    } else if (actualTheme === `light-theme`) {
-        console.log(`light`);
-    } else {
-        console.log(`blue`);
-    }
-})()

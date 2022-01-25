@@ -19,8 +19,14 @@
         border-radius: 1000px;
         background-color: var(--toggle-background);
         position: relative;
+        cursor: pointer;
         input[type="checkbox"] {
             display: none;
+        }
+        div {
+            height: 100%;
+            width: 33.3%;
+            float: left;
         }
     }
     &__slider {

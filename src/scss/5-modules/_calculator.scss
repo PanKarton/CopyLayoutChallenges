@@ -22,19 +22,21 @@
     .screen {
         background-color: var(--screen-background);
         width: 100%;
+        min-height: 9.5rem;
         border-radius: 10px;
         padding: $window-padding;
         text-align: right;
         p {
             @include margin-padding-reset;
         }
-        &__result {
+        &__current-operand {
             @include typography($size: $result-fs, $color: var(--color-1));
+            word-wrap: break-word;
         }
-        &__math-operation-wrapper {
+        &__current-operand-wrapper {
             margin-top: .5rem;
         }
-        &__math-operation {
+        &__prev-operand {
             @include typography($size: $math-operation-fs, $color: var(--color-2), $weight: 600);
         }
     }
