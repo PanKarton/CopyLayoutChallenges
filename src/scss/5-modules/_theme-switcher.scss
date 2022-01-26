@@ -13,20 +13,21 @@
         border: none;
         cursor: pointer;
     }
-    &__switch {
+    &__switch-wrapper {
         height: 1.5rem;
-        width: 4.375rem;
         border-radius: 1000px;
+        width: 4.375rem;
+        overflow: hidden;
+    }
+    &__switch {
+        display: block;
+        min-width: 100%;
+        min-height: 100%;
         background-color: var(--toggle-background);
         position: relative;
         cursor: pointer;
         input[type="checkbox"] {
             display: none;
-        }
-        div {
-            height: 100%;
-            width: 33.3%;
-            float: left;
         }
     }
     &__slider {

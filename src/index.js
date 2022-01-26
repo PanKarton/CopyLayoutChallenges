@@ -74,25 +74,27 @@ equalsBtn.addEventListener(`click`, () => {
 
 
 const numbers = [...document.querySelectorAll(`[data-theme-number]`)];
-const hitboxes = [...document.querySelectorAll(`[data-switcher-hitbox]`)];
-
+const switcherWrapper = document.querySelector(`[data-switch-wrapper]`);
 const calculatorModule = document.querySelector(`[data-calculator]`);
 const switcher = document.querySelector(`[data-switcher]`);
 
 const themeSwitcher = new ThemeSwitcher(calculatorModule, switcher);
 
+
+
 // set theme 
 numbers.forEach(number => {
     number.addEventListener(`click`, () => {
-        themeSwitcher.changeTheme(number, numbers);
+        const index = themeSwitcher.getIndex(number, numbers);
+        themeSwitcher.changeTheme(index);
     })
 });
-// switch is covered with 3 identical, transparent squares that work as hitbox to change theme if we want to click on `stadium shape` thing. Each index in array represents theme
-hitboxes.forEach(hitbox => {
-    hitbox.addEventListener(`click`, () => {
-        themeSwitcher.changeTheme(hitbox, hitboxes);
-    })
+
+switcherWrapper.addEventListener(`click`, event => {
+    const index = themeSwitcher.getIndexFromClickPosition(event);
+    themeSwitcher.changeTheme(index);
 });
+
 
 // set theme right after page load
 (() => {
