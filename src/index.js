@@ -22,53 +22,9 @@ const numberBtns = [...document.querySelectorAll(`[data-number]`)];
 const operationBtns = [...document.querySelectorAll(`[data-operation]`)];
 const allButtons = [resetBtn, equalsBtn, deleteBtn, ...numberBtns, ...operationBtns];
 
-const calculator = new Calculator(previousOperand, currentOperand);
-
-// push button effect
-allButtons.forEach(button => {
-    button.addEventListener(`mousedown`, event => {
-        calculator.toggleButtonState(event.currentTarget);
-    });
-    button.addEventListener(`mouseup`, event => {
-        calculator.toggleButtonState(event.currentTarget);
-    });
-});
-
-// add char
-numberBtns.forEach(number => {
-    number.addEventListener(`click`, event => {
-        calculator.appendChar(event.currentTarget.textContent);
-        calculator.updateDisplay();
-    })
-});
-
-// delete last char 
-deleteBtn.addEventListener(`click`, () => {
-    calculator.deleteLastChar();
-    calculator.updateDisplay();
-});
-
-// delete all
-resetBtn.addEventListener(`click`, () => {
-    calculator.clear();
-    calculator.updateDisplay();
-});
-
-//add operation
-operationBtns.forEach(operation => {
-    operation.addEventListener(`click`, event => {
-        calculator.addOperation(event.currentTarget.textContent);
-        calculator.updateDisplay();
-    })
-});
-equalsBtn.addEventListener(`click`, () => {
-    calculator.showResult();
-    calculator.updateDisplay();
-});
-
 
 // ---------------------------------------------
-// ============== calculator ===================
+// ============== theme switcher ===================
 // ---------------------------------------------
 
 

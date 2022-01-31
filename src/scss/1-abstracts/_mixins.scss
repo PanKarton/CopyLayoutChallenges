@@ -38,15 +38,3 @@
     aspect-ratio: 1;
     border-radius: 50%;
 }
-
-@mixin key-background($bg, $shadow) {
-    background-color: $bg;
-    box-shadow: 0px 4px 0px 0px $shadow;
-}
-
-@mixin key-pushed($bg, $shadow) {
-    &.active {
-        box-shadow: 0 -4px 0px 0px $bg;
-        background-color: $shadow;
-    }
-}
