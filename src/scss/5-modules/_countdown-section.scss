@@ -1,0 +1,35 @@
+@use '../1-abstracts/' as *;
+
+.countdown {
+  @include flex($direction: column, $justify: flex-start, $gap: 7rem);
+  height: 100vh;
+  background-color: $very-dark-blue;
+  background-image: url('../img/pattern-hills.svg'), url('../img/bg-stars.svg');
+  background-repeat: no-repeat, no-repeat;
+  background-size: max(1440px, 100%), max(1440px, 100%);
+  background-position: 84% bottom, center;
+  padding: $countdown-padding-top $countdown-padding-right
+    $countdown-padding-bottom $countdown-padding-left;
+  &__title {
+    @include margin-padding-reset;
+    @include typography($size: $fs-title, $color: $white);
+    text-transform: uppercase;
+    letter-spacing: 0.5rem;
+    text-align: center;
+  }
+  .timer.l-flex {
+    @include flex($gap: $timer-gap);
+  }
+  &__socialmedia-container {
+    margin-top: auto;
+    @include flex($gap: 2rem);
+  }
+  &__socialmedia-icon {
+    @include typography($color: $grayish-blue, $size: 2rem);
+    cursor: pointer;
+    transition: all 0.1s ease-in-out;
+    &:hover {
+      color: $soft-red;
+    }
+  }
+}
