@@ -15,7 +15,7 @@ const minutesContainer = document.querySelector(`[data-minutes]`);
 const secondsContainer = document.querySelector(`[data-seconds]`);
 
 // getTime turns date into miliseconds since 1 january 1970 00:00:00
-const finalDate = new Date(`April 17, 2022 00:00:00`).getTime();
+const finalDate = new Date(`September 1, 2022 00:00:00`).getTime();
 
 const countdown = new Countdown(daysContainer, hoursContainer, minutesContainer, secondsContainer, finalDate);
 

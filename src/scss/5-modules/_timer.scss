@@ -1,6 +1,6 @@
 @use '../1-abstracts/' as *;
 .timer {
-  width: min(100%, 43rem);
+  width: min(100%, 50rem);
   &__tile-container {
     flex-basis: 25%;
     text-align: center;
@@ -20,7 +20,7 @@
       content: '';
       position: absolute;
       top: 50%;
-      @include circle($diagonal: 0.875rem);
+      @include circle($diagonal: $size-diagonal);
       background-color: $mostly-black-blue;
       z-index: 100;
     }
