@@ -1,6 +1,7 @@
-const path = require(`path`);
-const HtmlWebpackPlugin = require(`html-webpack-plugin`);
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const HtmlWebpackPlugin = require(`html-webpack-plugin`);
+const path = require(`path`);
+
 module.exports = {
   mode: `development`,
   entry: `./src/index.js`,
@@ -16,8 +17,8 @@ module.exports = {
         use: [MiniCssExtractPlugin.loader, `css-loader`, `sass-loader`],
       },
       {
-        test: /\.html$/i,
-        loader: 'html-loader',
+        test: /\.html/,
+        loader: `html-loader`,
       },
     ],
   },
@@ -34,9 +35,5 @@ module.exports = {
       directory: path.join(__dirname, 'dist'),
     },
     liveReload: false,
-    // devMiddleware: {
-    //     index: 'index.html',
-    //     writeToDisk: true,
-    // }
   },
 };

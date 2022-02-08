@@ -5,37 +5,29 @@
 The designs were created to the following widths:
 
 - Mobile: 375px
-- Desktop: 1440px
+- Desktop: 1366px
 
 ## Colors
 
 ### Primary
 
-- Grayish blue: hsl(237, 18%, 59%)
-- Soft red: hsl(345, 95%, 68%)
+- Scissors Gradient: hsl(39, 89%, 49%) to hsl(40, 84%, 53%)
+- Paper Gradient: hsl(230, 89%, 62%) to hsl(230, 89%, 65%)
+- Rock Gradient: hsl(349, 71%, 52%) to hsl(349, 70%, 56%)
+- Lizard Gradient: hsl(261, 73%, 60%) to hsl(261, 72%, 63%)
+- Cyan: hsl(189, 59%, 53%) to hsl(189, 58%, 57%)
 
 ### Neutral
 
-- White: hsl(0, 0%, 100%)
-- Dark desaturated blue: hsl(236, 21%, 26%)
-- Very dark blue: hsl(235, 16%, 14%)
-- Very dark (mostly black) blue: hsl(234, 17%, 12%)
+- Dark Text: hsl(229, 25%, 31%)
+- Score Text: hsl(229, 64%, 46%)
+- Header Outline: hsl(217, 16%, 45%)
 
-## Typography
+### Background
 
-### Body Copy
+- Radial Gradient: hsl(214, 47%, 23%) to hsl(237, 49%, 15%)
 
-- Font size: 14px
+## Fonts
 
-### Font
-
-- Family: [Red Hat Text](https://fonts.google.com/specimen/Red+Hat+Text)
-- Weights: 700
-
-## Icons
-
-We provide the required social icons. But, if you prefer, you can use a font icon library. Some suggestions can be found below:
-
-- [Font Awesome](https://fontawesome.com)
-- [IcoMoon](https://icomoon.io)
-- [Ionicons](https://ionicons.com)
+- Family: [Barlow Semi Condensed](https://fonts.google.com/specimen/Barlow+Semi+Condensed)
+- Weights: 600, 700

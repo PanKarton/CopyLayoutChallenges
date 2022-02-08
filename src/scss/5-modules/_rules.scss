@@ -1,0 +1,37 @@
+@use '../1-abstracts/' as *;
+
+.rules {
+  @include flex;
+  position: absolute;
+  inset: 0;
+  background-color: hsla(0, 0, 0, 0.5);
+  &__wrapper {
+    @include flex;
+    background-color: #fff;
+    position: relative;
+    z-index: 1000;
+    padding: 5rem 2rem 3rem 2rem;
+    border-radius: 10px;
+    img {
+      display: block;
+      max-width: 100%;
+    }
+    @media screen and (max-width: 30rem) {
+      position: absolute;
+      inset: 0;
+    }
+  }
+  &__heading {
+    @include margin-padding-reset;
+    @include typography($size: 2rem, $color: $dark-text, $weight: 700);
+    text-transform: uppercase;
+    position: absolute;
+    top: 2rem;
+    left: 2rem;
+    @media screen and (max-width: 30rem) {
+      left: 50%;
+      top: 5rem;
+      transform: translate(-50%);
+    }
+  }
+}

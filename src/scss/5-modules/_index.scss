@@ -1,2 +1,4 @@
-@use './countdown-section';
-@use './timer';
+@forward './game';
+@forward './stats';
+@forward './picker';
+@forward './rules';

@@ -1,0 +1,37 @@
+@use '../1-abstracts/' as *;
+
+.rules-button {
+  position: absolute;
+  bottom: 2rem;
+  right: 2rem;
+  background-color: transparent;
+  border: 2px solid #aaa;
+  border-radius: 10px;
+  padding: 0.5rem 2.5rem;
+  @include typography($size: 1.125rem, $weight: 500);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  cursor: pointer;
+  &:hover {
+    transition: 0.1s;
+    background-color: hsla(0, 100%, 100%, 0.1);
+  }
+  @media screen and (max-width: 30rem) {
+    right: 50%;
+    transform: translateX(50%);
+  }
+}
+
+.rules-exit-button {
+  background-color: transparent;
+  border: none;
+  position: absolute;
+  top: 2.4rem;
+  right: 2rem;
+  @media screen and (max-width: 30rem) {
+    top: auto;
+    bottom: 4rem;
+    right: 50%;
+    transform: translateX(50%);
+  }
+}

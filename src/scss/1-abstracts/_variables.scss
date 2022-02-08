@@ -1,30 +1,49 @@
 // Colors
 // Primary
-$grayish-blue: hsl(237, 18%, 59%);
-$soft-red: hsl(345, 95%, 68%);
-// Neutral
-$white: hsl(0, 0%, 100%);
-$dark-desaturated-blue: hsl(236, 21%, 26%);
-$mid-flip-color: hsl(236, 21%, 31%);
-$lightened-dark-desaturated-blue: hsl(236, 21%, 36%);
-$very-dark-blue: hsl(235, 16%, 14%);
-$mostly-black-blue: hsl(234, 17%, 12%);
-// Typography
-$ff-primary: 'Red Hat Text', sans-serif;
-$fs-primary: 0.875rem;
-$fs-numbers: clamp(1.75rem, 7.5vw, 5rem);
-$fs-units: clamp(0.25rem, 2vw, 1rem);
-$spacing-units: clamp(0.125rem, 1vw, 0.375rem);
-$fs-title: clamp(1.25rem, 5vw, 1.75rem);
-// Spaces between
-$timer-gap: clamp(1rem, 0vw, 2rem);
+$scissors-primary: hsl(40, 84%, 53%);
+$scissors-shadow: hsl(39, 100%, 35%);
+$paper-primary: hsl(230, 89%, 62%);
+$paper-shadow: hsl(230, 89%, 55%);
+$rock-primary: hsl(349, 71%, 52%);
+$rock-shadow: hsl(349, 70%, 35%);
+$lizard-primary: hsl(261, 73%, 60%);
+$lizard-shadow: hsl(261, 72%, 43%);
+$spock-primary: hsl(189, 59%, 53%);
+$spock-shadow: hsl(189, 58%, 37%);
+$win-color: #add911;
+$lose-color: #f73d28;
+
+//Neutral
+$dark-text: hsl(229, 25%, 31%);
+$score-text: hsl(229, 64%, 46%);
+$header-outline: hsl(217, 16%, 45%);
+
+// Background
+$bgc-primary: hsl(214, 47%, 23%);
+$bgc-secondary: hsl(237, 49%, 15%);
+
+// Font family
+$ff-primary: 'Barlow Semi Condensed', sans-serif;
+
+// Font size
+$fs-primary: 1.25rem;
+$fs-score-heading: clamp(1.25rem, 3vw, 1.25rem);
+$fs-stats: clamp(1.125rem, 3vw, 1.25rem);
+
+// Logo
+$height-logo: clamp(6rem, 20vw, 8.5rem);
+
+// Radius
+$radius-heading: clamp(0.25rem, 1.75vw, 0.75rem);
+
 // Paddings
-$countdown-padding-top: clamp(20vh, 15vw, 25vh);
-$countdown-padding-right: 1.5rem;
-$countdown-padding-bottom: 10vh;
-$countdown-padding-left: 1.5rem;
-$tile-padding-vertical: clamp(1rem, 0vw, 1.5rem);
-// Border radius
-$radius-tile: clamp(5px, 0vw, 10px);
-// Sizes
-$size-diagonal: clamp(0.625rem, 2.5vw, 1.375rem);
+$padding-vertical-heading: clamp(0.625rem, 2.5vw, 1.125rem);
+$padding-horizontal-heading: clamp(0.75rem, 4vw, 2rem);
+$padding-vertical-score-container: 0.75rem;
+$padding-horizontal-score-container: clamp(0.625rem, 4.5vw, 2rem);
+
+// Pick option
+$pick-diagonal: clamp(6rem, 25vw, 8.5rem);
+$pick-border: clamp(0.625rem, 2.5vw, 0.75rem);
+$pick-inner-shadow-height: clamp(0.25rem, 1vw, 0.5rem);
+$pick-outer-shadow-height: clamp(0.25rem, 1.125vw, 0.375rem);

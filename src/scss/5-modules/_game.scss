@@ -1,0 +1,19 @@
+@use '../1-abstracts/' as *;
+
+.game {
+  height: 100vh;
+  background: radial-gradient(at top center, $bgc-primary, $bgc-secondary);
+  @include flex($direction: column, $justify: flex-start);
+  padding-top: 3rem;
+  &__heading-container {
+    @include flex($justify: space-between);
+    width: min(45rem, 85vw);
+    padding: $padding-vertical-heading $padding-horizontal-heading;
+    border: 3px solid $header-outline;
+    border-radius: $radius-heading;
+  }
+  &__logo {
+    display: block;
+    height: $height-logo;
+  }
+}

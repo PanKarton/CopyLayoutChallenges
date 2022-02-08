@@ -21,12 +21,7 @@
   gap: $gap;
 }
 
-@mixin typography(
-  $family: v.$ff-primary,
-  $size: v.$fs-primary,
-  $color: white,
-  $weight: 700
-) {
+@mixin typography($family: v.$ff-primary, $size: v.$fs-primary, $color: white, $weight: 600) {
   font-family: $family;
   font-size: $size;
   color: $color;
@@ -42,4 +37,10 @@
   width: $diagonal;
   aspect-ratio: 1;
   border-radius: 50%;
+}
+
+@mixin pseudo($display: block, $pos: absolute, $content: '') {
+  content: $content;
+  display: $display;
+  position: $pos;
 }

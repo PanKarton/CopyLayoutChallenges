@@ -1,0 +1,43 @@
+@use '../1-abstracts/' as *;
+
+.stats {
+  @include flex($direction: column, $justify: space-between, $gap: 0);
+  background-color: #fff;
+  text-align: center;
+  border-radius: $radius-heading;
+  flex-basis: 5rem;
+  height: 100%;
+  padding: $padding-vertical-score-container $padding-horizontal-score-container;
+  &__heading {
+    @include margin-padding-reset;
+    @include typography($size: $fs-score-heading, $color: $score-text);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+  &__list {
+    @include margin-padding-reset;
+    margin-top: 0.125rem;
+    * + * {
+      margin-top: 0.125rem;
+    }
+  }
+  &__stat-container {
+    @include flex($justify: space-between);
+  }
+  &__stat-name {
+    @include margin-padding-reset;
+    @include typography($size: $fs-stats);
+    &--wins {
+      color: $win-color;
+    }
+    &--loses {
+      color: $lose-color;
+    }
+    &--draws {
+      color: $dark-text;
+    }
+  }
+  &__counter {
+    @include typography($size: $fs-stats, $color: $dark-text);
+  }
+}

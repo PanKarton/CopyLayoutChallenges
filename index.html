@@ -1,71 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- displays site properly based on user's device -->
+    <title>Rock Paper Scissors Lizard Spock game</title>
 
     <link rel="icon" type="image/png" sizes="32x32" href="./src/img/favicon-32x32.png" />
-
-    <title>Frontend Mentor | Launch countdown timer</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer"
-    />
-</head>
-
-<body>
-    <section class="countdown">
-        <h1 class="countdown__title">Zara odpalamy petarde!!!</h1>
-        <div class="timer l-flex">
-            <div class="timer__tile-container">
-                <div class="timer__tile">
-                    <div data-days class="timer__tile-number" data-number-before data-number-after>
-                        <span class="timer__flip-front"></span>
-                        <span class="timer__flip-back flipped"></span>
-                    </div>
-                </div>
-                <h2 class="timer__time-unit">Days</h2>
-            </div>
-            <div class="timer__tile-container"> 
-                <div class="timer__tile">
-                    <div data-hours class="timer__tile-number" data-number-before data-number-after>
-                        <span class="timer__flip-front"></span>
-                        <span class="timer__flip-back flipped"></span>
-                    </div>
-                </div>
-                <h2 class="timer__time-unit">Hours</h2>
-            </div>
-            <div class="timer__tile-container">
-                <div class="timer__tile">
-                    <div data-minutes class="timer__tile-number" data-number-before data-number-after>
-                        <span class="timer__flip-front"></span>
-                        <span class="timer__flip-back flipped"></span>
-                    </div>
-                </div>
-                <h2 class="timer__time-unit">Minutes</h2>
-            </div>
-            <div class="timer__tile-container">
-                <div class="timer__tile">
-                    <div data-seconds class="timer__tile-number" data-number-before data-number-after>
-                        <span class="timer__flip-front"></span>
-                        <span class="timer__flip-back flipped"></span>
-                    </div>
-                </div>
-                <h2 class="timer__time-unit">Seconds</h2>
-            </div>
+  </head>
+  <body>
+    <section class="game">
+      <!-- Heading with score -->
+      <div class="game__heading-container">
+        <img src="src/img/logo-bonus.svg" alt="rock paper scissors lizard spock words logo" class="game__logo" />
+        <div class="stats">
+          <h1 class="stats__heading">score</h1>
+          <ul class="stats__list">
+            <li class="stats__stat-container">
+              <h2 class="stats__stat-name stats__stat-name--wins">Wins:</h2>
+              <span class="stats__counter">5</span>
+            </li>
+            <li class="stats__stat-container">
+              <h2 class="stats__stat-name stats__stat-name--loses">Loses:</h2>
+              <span class="stats__counter">12</span>
+            </li>
+            <li class="stats__stat-container">
+              <h2 class="stats__stat-name stats__stat-name--draws">Draws:</h2>
+              <span class="stats__counter">3</span>
+            </li>
+          </ul>
         </div>
-        <div class="countdown__socialmedia-container l-flex">
-            <div class="countdown__socialmedia-icon">
-                <i class="fab fa-facebook-square"></i>
-            </div>
-            <div class="countdown__socialmedia-icon">
-                <i class="fab fa-pinterest-square"></i>
-            </div>
-            <div class="countdown__socialmedia-icon">
-                <i class="fab fa-instagram-square"></i>
-            </div>
+      </div>
+      <!-- Pick your choice -->
+      <div class="picker">
+        <ul class="picker__option-list">
+          <li class="picker__option-wrapper picker__option-wrapper--scissors">
+            <button data-option-scissors class="picker__option">
+              <img src="./src/img/icon-scissors.svg" alt="pointing and middle fingers straight" />
+            </button>
+          </li>
+          <li class="picker__option-wrapper picker__option-wrapper--paper">
+            <button data-option-paper class="picker__option">
+              <img src="./src/img/icon-paper.svg" alt="all fingers straight" />
+            </button>
+          </li>
+          <li class="picker__option-wrapper picker__option-wrapper--rock">
+            <button data-option-rock class="picker__option">
+              <img src="./src/img/icon-rock.svg" alt="fist" />
+            </button>
+          </li>
+          <li class="picker__option-wrapper picker__option-wrapper--lizard">
+            <button data-option-lizard class="picker__option">
+              <img src="./src/img/icon-lizard.svg" alt="lizard icon" />
+            </button>
+          </li>
+          <li class="picker__option-wrapper picker__option-wrapper--spock">
+            <button data-option-spock class="picker__option">
+              <img src="./src/img/icon-spock.svg" alt="spock hand greeting" />
+            </button>
+          </li>
+        </ul>
+      </div>
+      <!-- Compare choices -->
+      <!-- <div class="game__compare-choices">
+        <div class="game__player-choice-container">
+          <h2 class="game__player-heading">You picked</h2>
+          <div class="game__player-choice picker__option"></div>
         </div>
+        <div class="game__result-container">
+          <h3 class="game__result">You lose</h3>
+          <button class="game__play-again">Play again</button>
+        </div>
+        <div class="game__computer-choice-container">
+          <h2 class="game__computer-heading">Computer picked</h2>
+          <div class="game__computer-choice picker__option"></div>
+        </div>
+      </div> -->
+      <!-- Rules -->
+      <button class="rules-button">Rules</button>
+      <div class="rules">
+        <div class="rules__wrapper">
+          <h2 class="rules__heading">Rules</h2>
+          <button class="rules-exit-button">
+            <img src="./src/img/icon-close.svg" alt="X icon" />
+          </button>
+          <img src="./src/img/image-rules-bonus.svg" alt="rules explaining who wins when" />
+        </div>
+      </div>
     </section>
-</body>
-
+  </body>
 </html>
