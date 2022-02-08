@@ -62,16 +62,29 @@ class Countdown {
   };
 
   flip = (card, currNumber) => {
-    // console.log(currNumber)
+    // Create next number to prepare hidden
     const nextNumber = this.getNextNumber(card, currNumber);
-    // console.log(nextNumber)
-    card.querySelector(`span.timer__flip-front`).classList.add(`flipped`); // Front do pionu
-    card.querySelector(`span.timer__flip-back`).classList.remove(`flipped`); // Back na dół
+    // Get flip cards
+    const frontCard = card.querySelector(`span.timer__flip-front`);
+    const backCard = card.querySelector(`span.timer__flip-back`);
+    // Flip those cards
+    frontCard.classList.add(`flipped`); // Front goes 90deg
+    backCard.classList.add(`unflipped`); // Back goes down
+    // Wait for flip to get done
     this.sleep(300).then(() => {
-      this.removeFlippedCards(card); // Skasuj karty
+      // Update pseudo elements before and after
       card.setAttribute(`data-number-before`, nextNumber); // Before
       card.setAttribute(`data-number-after`, currNumber); // After
-      this.createNewFlipCards(card, currNumber, nextNumber); // Zrób karty
+
+      // Unflip cards
+      frontCard.classList.remove(`flipped`); // Front goes 90deg
+      backCard.classList.remove(`unflipped`); // Back goes down
+
+      // Set new values to cards
+      frontCard.textContent = currNumber;
+      backCard.textContent = nextNumber;
+
+      // this.createNewFlipCards(card, currNumber, nextNumber); // Zrób karty
     });
   };
 
@@ -89,24 +102,24 @@ class Countdown {
     return currNumber;
   };
 
-  removeFlippedCards = (card) => {
-    // Remove flipped cards
-    card.querySelector(`span.timer__flip-front`).remove();
-    card.querySelector(`span.timer__flip-back`).remove();
-  };
+  // removeFlippedCards = (card) => {
+  //   // Remove flipped cards
+  //   card.querySelector(`span.timer__flip-front`).remove();
+  //   card.querySelector(`span.timer__flip-back`).remove();
+  // };
 
-  createNewFlipCards = (card, currNumber, nextNumber) => {
-    // Create front card
-    const newFront = document.createElement(`span`);
-    newFront.classList.add(`timer__flip-front`);
-    newFront.textContent = currNumber;
-    // Create back card
-    const newBack = document.createElement(`span`);
-    newBack.classList.add(`timer__flip-back`, `flipped`);
-    newBack.textContent = nextNumber;
-    // Append Cards
-    card.append(newFront, newBack);
-  };
+  // createNewFlipCards = (card, currNumber, nextNumber) => {
+  //   // Create front card
+  //   const newFront = document.createElement(`span`);
+  //   newFront.classList.add(`timer__flip-front`);
+  //   newFront.textContent = currNumber;
+  //   // Create back card
+  //   const newBack = document.createElement(`span`);
+  //   newBack.classList.add(`timer__flip-back`, `flipped`);
+  //   newBack.textContent = nextNumber;
+  //   // Append Cards
+  //   card.append(newFront, newBack);
+  // };
 }
 
 export default Countdown;

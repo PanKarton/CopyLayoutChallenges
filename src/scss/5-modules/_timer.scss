@@ -49,6 +49,7 @@
     }
     &::before {
       content: attr(data-number-before);
+      color: $darker-soft-red;
       top: 0;
       align-items: flex-end;
     }
@@ -77,11 +78,13 @@
     align-items: flex-end;
     transform-origin: center bottom;
     background-color: $dark-desaturated-blue;
+    color: $darker-soft-red;
     // background-color: blue;
-    transition: all 0.15s ease-in-out;
+    transform: rotateX(0deg);
     &.flipped {
       transform: rotateX(90deg);
       background-color: $mid-flip-color;
+      transition: all 0.15s ease-in-out;
     }
   }
   &__flip-back {
@@ -89,11 +92,12 @@
     align-items: flex-start;
     transform-origin: center top;
     background-color: $lightened-dark-desaturated-blue;
+    transform: rotateX(90deg);
     // background-color: red;
-    transition: all 0.15s 0.15s ease-in-out;
-    &.flipped {
+    &.unflipped {
+      transition: all 0.15s 0.15s ease-in-out;
       background-color: $mid-flip-color;
-      transform: rotateX(90deg);
+      transform: rotateX(0deg);
     }
   }
   &__time-unit {
