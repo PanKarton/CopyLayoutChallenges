@@ -1,10 +1,10 @@
 @use '../1-abstracts/' as *;
 
 .game {
-  height: 100vh;
+  min-height: 100vh;
   background: radial-gradient(at top center, $bgc-primary, $bgc-secondary);
   @include flex($direction: column, $justify: flex-start);
-  padding-top: 3rem;
+  padding-top: clamp(2rem, 9vw, 5rem);
   &__heading-container {
     @include flex($justify: space-between);
     width: min(45rem, 85vw);

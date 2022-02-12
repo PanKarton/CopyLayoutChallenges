@@ -16,13 +16,13 @@
   }
   &__list {
     @include margin-padding-reset;
-    margin-top: 0.125rem;
+    margin-top: 0.5rem;
     * + * {
       margin-top: 0.125rem;
     }
   }
   &__stat-container {
-    @include flex($justify: space-between);
+    @include flex($justify: space-between, $gap: clamp(1.5rem, 8vw, 3rem));
   }
   &__stat-name {
     @include margin-padding-reset;

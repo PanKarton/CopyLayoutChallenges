@@ -1,59 +1,47 @@
 @use '../1-abstracts/' as *;
 
 .picker {
+  position: relative;
   width: min(27.5rem, 85vw);
   aspect-ratio: 1;
   background: url('../img/bg-pentagon.svg') no-repeat center center;
   background-size: 75%;
-  position: relative;
   margin-top: 1.5rem;
-  &__option-wrapper {
-    @include circle($diagonal: $pick-diagonal);
+  .token-wrapper {
     position: absolute;
-    overflow: hidden;
-    background-color: #bbb;
-    border-width: $pick-border;
-    border-style: solid;
+
+    border-width: $picker-token-border;
     &--scissors {
       top: 0;
       left: 50%;
       transform: translateX(-50%);
-      border-color: $scissors-primary;
       box-shadow: 0 $pick-outer-shadow-height 0 0 $scissors-shadow;
     }
     &--paper {
       right: 0;
       top: 30%;
-      border-color: $paper-primary;
       box-shadow: 0 $pick-outer-shadow-height 0 0 $paper-shadow;
     }
     &--rock {
       bottom: 0;
       right: 15%;
-      border-color: $rock-primary;
       box-shadow: 0 $pick-outer-shadow-height 0 0 $rock-shadow;
     }
     &--lizard {
       bottom: 0;
       left: 15%;
-      border-color: $lizard-primary;
       box-shadow: 0 $pick-outer-shadow-height 0 0 $lizard-shadow;
     }
     &--spock {
       left: 0;
       top: 30%;
-      border-color: $spock-primary;
       box-shadow: 0 $pick-outer-shadow-height 0 0 $spock-shadow;
     }
-  }
-  &__option {
-    @include circle($diagonal: calc($pick-diagonal - 2 * $pick-border));
-    position: absolute;
-    top: $pick-inner-shadow-height;
-    border: none;
-    cursor: pointer;
-    img {
+    &__img {
       max-height: 55%;
     }
+  }
+  &--hidden {
+    display: none;
   }
 }

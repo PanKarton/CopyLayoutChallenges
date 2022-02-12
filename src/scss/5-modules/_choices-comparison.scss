@@ -1,0 +1,98 @@
+@use '../1-abstracts/' as *;
+
+@use '../1-abstracts/' as *;
+
+.choices-comparison {
+  @include flex($gap: $choice-flex-gap);
+  @media screen and (max-width: 37.5rem) {
+    width: 70vw;
+    justify-content: space-between;
+    gap: 0;
+  }
+  &__choice-container {
+    // width: $choice-token-width;
+    @include flex($direction: column, $gap: 5rem);
+    @media screen and (max-width: 37.5rem) {
+      flex-direction: column-reverse;
+      gap: 2rem;
+      padding-top: 3rem;
+    }
+  }
+  &__choice-heading {
+    @include typography($size: $choice-heading-fs);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+  &__choice {
+    @include flex;
+    width: $choice-token-width;
+    position: relative;
+  }
+  &__choice-placeholder {
+    @include circle($diagonal: 100%);
+    background-color: $bgc-primary;
+  }
+  .token-wrapper {
+    box-sizing: content-box;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    border-width: $choice-token-border-width;
+    &--scissors {
+      box-shadow: 0 $choice-token-bottom-shadow-width 0 0 $scissors-shadow;
+    }
+    &--paper {
+      box-shadow: 0 $choice-token-bottom-shadow-width 0 0 $paper-shadow;
+    }
+    &--rock {
+      box-shadow: 0 $choice-token-bottom-shadow-width 0 0 $rock-shadow;
+    }
+    &--lizard {
+      box-shadow: 0 $choice-token-bottom-shadow-width 0 0 $lizard-shadow;
+    }
+    &--spock {
+      box-shadow: 0 $choice-token-bottom-shadow-width 0 0 $spock-shadow;
+    }
+    &__token {
+      top: $choice-token-top-shadow-width;
+      width: 100%;
+    }
+    &__img {
+      height: 50%;
+    }
+    &--winner {
+      box-shadow: 0 0 0 $winner-shadow-width hsla(0, 0%, 100%, 0.08),
+        0 0 0 calc($winner-shadow-width * 2) hsla(0, 0%, 100%, 0.05),
+        0 0 0 calc($winner-shadow-width * 3) hsla(0, 0%, 100%, 0.03),
+        0 0 0 calc($winner-shadow-width * 4) hsla(0, 0%, 100%, 0.01);
+    }
+  }
+  &__result-container {
+    // border: 1px solid red;
+    text-align: center;
+    @media screen and (max-width: 37.5rem) {
+      position: absolute;
+      bottom: 6.5rem;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    &--hidden {
+      display: none;
+    }
+  }
+  &__result {
+    @include margin-padding-reset;
+    @include typography($size: $result-fs, $weight: 700);
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    margin-top: 7rem;
+    @media screen and (max-width: 37.5rem) {
+      font-size: 2rem;
+    }
+  }
+  &--hidden {
+    display: none;
+  }
+}

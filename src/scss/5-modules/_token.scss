@@ -1,0 +1,38 @@
+@use '../1-abstracts/' as *;
+
+.token-wrapper {
+  box-sizing: content-box;
+
+  @include circle($diagonal: $pick-diagonal);
+  overflow: hidden;
+  background-color: #bbb;
+  border-style: solid;
+  position: relative;
+  &--scissors {
+    border-color: $scissors-primary;
+  }
+  &--paper {
+    border-color: $paper-primary;
+  }
+  &--rock {
+    border-color: $rock-primary;
+  }
+  &--lizard {
+    border-color: $lizard-primary;
+  }
+  &--spock {
+    border-color: $spock-primary;
+  }
+  &__token {
+    @include circle($diagonal: 90%);
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    top: $pick-inner-shadow-height;
+    border: none;
+    cursor: pointer;
+  }
+  &__img {
+    max-height: 55%;
+  }
+}

@@ -4,7 +4,7 @@
   @include flex;
   position: absolute;
   inset: 0;
-  background-color: hsla(0, 0, 0, 0.5);
+  background-color: hsla(0, 0%, 0%, 0.5);
   &__wrapper {
     @include flex;
     background-color: #fff;
@@ -19,6 +19,7 @@
     @media screen and (max-width: 30rem) {
       position: absolute;
       inset: 0;
+      border-radius: 0;
     }
   }
   &__heading {
@@ -33,5 +34,8 @@
       top: 5rem;
       transform: translate(-50%);
     }
+  }
+  &--hidden {
+    display: none;
   }
 }

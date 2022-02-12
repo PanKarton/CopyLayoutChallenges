@@ -1,6 +1,6 @@
 @use '../1-abstracts/' as *;
 
-.rules-button {
+.btn-rules {
   position: absolute;
   bottom: 2rem;
   right: 2rem;
@@ -28,10 +28,25 @@
   position: absolute;
   top: 2.4rem;
   right: 2rem;
+  cursor: pointer;
   @media screen and (max-width: 30rem) {
     top: auto;
     bottom: 4rem;
     right: 50%;
     transform: translateX(50%);
+  }
+}
+
+.btn-play-again {
+  text-align: center;
+  text-transform: uppercase;
+  border: none;
+  width: 100%;
+  padding: 1rem 0;
+  border-radius: 10px;
+  @include typography($color: $dark-text);
+  cursor: pointer;
+  &:hover {
+    background-color: #fff;
   }
 }

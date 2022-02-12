@@ -18,70 +18,83 @@
           <ul class="stats__list">
             <li class="stats__stat-container">
               <h2 class="stats__stat-name stats__stat-name--wins">Wins:</h2>
-              <span class="stats__counter">5</span>
+              <span data-wins class="stats__counter">0</span>
             </li>
             <li class="stats__stat-container">
-              <h2 class="stats__stat-name stats__stat-name--loses">Loses:</h2>
-              <span class="stats__counter">12</span>
+              <h2 class="stats__stat-name stats__stat-name--loses">Losses:</h2>
+              <span data-losses class="stats__counter">0</span>
             </li>
             <li class="stats__stat-container">
               <h2 class="stats__stat-name stats__stat-name--draws">Draws:</h2>
-              <span class="stats__counter">3</span>
+              <span data-draws class="stats__counter">0</span>
             </li>
           </ul>
         </div>
       </div>
       <!-- Pick your choice -->
-      <div class="picker">
-        <ul class="picker__option-list">
-          <li class="picker__option-wrapper picker__option-wrapper--scissors">
-            <button data-option-scissors class="picker__option">
-              <img src="./src/img/icon-scissors.svg" alt="pointing and middle fingers straight" />
+      <div data-choice-picker class="picker">
+        <ul class="token-list">
+          <div data-choice-token="0" class="token-wrapper token-wrapper--scissors">
+            <button data-option-scissors class="token-wrapper__token">
+              <img
+                class="token-wrapper__img"
+                src="./src/img/icon-scissors.svg"
+                alt="pointing and middle fingers straight"
+              />
             </button>
-          </li>
-          <li class="picker__option-wrapper picker__option-wrapper--paper">
-            <button data-option-paper class="picker__option">
-              <img src="./src/img/icon-paper.svg" alt="all fingers straight" />
+          </div>
+          <div data-choice-token="1" class="token-wrapper token-wrapper--paper">
+            <button data-option-paper class="token-wrapper__token">
+              <img class="token-wrapper__img" src="./src/img/icon-paper.svg" alt="all fingers straight" />
             </button>
-          </li>
-          <li class="picker__option-wrapper picker__option-wrapper--rock">
-            <button data-option-rock class="picker__option">
-              <img src="./src/img/icon-rock.svg" alt="fist" />
+          </div>
+          <div data-choice-token="2" class="token-wrapper token-wrapper--rock">
+            <button data-option-rock class="token-wrapper__token">
+              <img class="token-wrapper__img" src="./src/img/icon-rock.svg" alt="fist" />
             </button>
-          </li>
-          <li class="picker__option-wrapper picker__option-wrapper--lizard">
-            <button data-option-lizard class="picker__option">
-              <img src="./src/img/icon-lizard.svg" alt="lizard icon" />
+          </div>
+          <div data-choice-token="3" class="token-wrapper token-wrapper--lizard">
+            <button data-option-lizard class="token-wrapper__token">
+              <img class="token-wrapper__img" src="./src/img/icon-lizard.svg" alt="lizard icon" />
             </button>
-          </li>
-          <li class="picker__option-wrapper picker__option-wrapper--spock">
-            <button data-option-spock class="picker__option">
-              <img src="./src/img/icon-spock.svg" alt="spock hand greeting" />
+          </div>
+          <div data-choice-token="4" class="token-wrapper token-wrapper--spock">
+            <button data-option-spock class="token-wrapper__token">
+              <img class="token-wrapper__img" src="./src/img/icon-spock.svg" alt="spock hand greeting" />
             </button>
-          </li>
+          </div>
         </ul>
       </div>
       <!-- Compare choices -->
-      <!-- <div class="game__compare-choices">
-        <div class="game__player-choice-container">
-          <h2 class="game__player-heading">You picked</h2>
-          <div class="game__player-choice picker__option"></div>
+      <div data-comparison-board class="choices-comparison choices-comparison--hidden">
+        <div class="choices-comparison__choice-container">
+          <h2 class="choices-comparison__choice-heading">You picked</h2>
+          <div data-player-choice-container class="choices-comparison__choice">
+            <div class="choices-comparison__choice-placeholder"></div>
+            <!-- Player choice -->
+          </div>
         </div>
-        <div class="game__result-container">
-          <h3 class="game__result">You lose</h3>
-          <button class="game__play-again">Play again</button>
+        <div
+          data-result-wrapper
+          class="choices-comparison__result-container choices-comparison__result-container--hidden"
+        >
+          <h3 data-result class="choices-comparison__result">You lose</h3>
+          <button data-play-again-btn class="choices-comparison__play-again btn-play-again">Play again</button>
         </div>
-        <div class="game__computer-choice-container">
-          <h2 class="game__computer-heading">Computer picked</h2>
-          <div class="game__computer-choice picker__option"></div>
+        <div class="choices-comparison__choice-container">
+          <h2 class="choices-comparison__choice-heading">Enemy picked</h2>
+          <div data-cpu-choice-container class="choices-comparison__choice">
+            <div class="choices-comparison__choice-placeholder"></div>
+            <!-- Enemy choice -->
+          </div>
         </div>
-      </div> -->
+      </div>
       <!-- Rules -->
-      <button class="rules-button">Rules</button>
-      <div class="rules">
+      <button data-btn-show-rules class="btn-rules">Rules</button>
+      <div data-rules-sheet class="rules rules--hidden">
         <div class="rules__wrapper">
           <h2 class="rules__heading">Rules</h2>
-          <button class="rules-exit-button">
+          <button data-btn-hide-rules class="rules-exit-button">
             <img src="./src/img/icon-close.svg" alt="X icon" />
           </button>
           <img src="./src/img/image-rules-bonus.svg" alt="rules explaining who wins when" />
